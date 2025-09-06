@@ -138,7 +138,7 @@ export default function TicketSelector() {
                   transition-all duration-500 ease-in-out mb-2 sm:mb-4"
                 size="lg"
               >
-<span className="relative z-10 text-xs sm:text-base md:text-lg lg:text-xl font-semibold text-center block px-2 sm:px-4 md:px-6 lg:px-8">
+<span className="relative z-10 text-xs sm:text-base md:text-lg font-semibold text-center block px-2 sm:px-4 md:px-6 lg:px-8">
   YES, I WANT INTEGRITY TAX SOFTWARE FOR $899
 </span>                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
