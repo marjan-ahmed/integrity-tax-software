@@ -30,7 +30,7 @@ export default function TicketSelector() {
     <div
       className="relative min-h-screen p-4 sm:p-6 md:p-8 lg:p-12 bg-cover bg-center"
       style={{
-        backgroundImage: "url('/images/bg.jpg')", // local image from public folder
+        backgroundImage: "url('images/bg.jpg')", // local image from public folder
       }}
     >
       {/* Overlay to lighten the background */}

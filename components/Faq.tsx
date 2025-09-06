@@ -39,7 +39,7 @@ export default function FAQSection() {
     <section
       className="relative py-12 px-6 md:px-12 text-gray-800"
       style={{
-        backgroundImage: "url('/images/bg.jpg')",
+        backgroundImage: "url('images/bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
