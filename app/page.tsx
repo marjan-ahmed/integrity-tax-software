@@ -1,12 +1,17 @@
 'use client'
+
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import TicketSelector from "./components/TicketSelector";
 import VIPSection from "@/components/VipBonuses";
 import FAQSection from "@/components/Faq";
-import MoneyBackGuarantee from "@/components/MoneyBackGuarantee";
+import HowItWorks from "./components/HowItWorks";
+import UrgencySection from "./components/Urgency";
+import LaunchOfferSection from "@/components/LaunchOfferSection";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
+import { MoveRight } from "lucide-react";
+import ClientTestimonials from "./components/ClientTestimonials";
 
 export default function Home() {
   const fadeUp = { hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8 } } };
@@ -18,14 +23,15 @@ export default function Home() {
 
   return (
     <>
+      {/* Top Marquee */}
       <section>
         <div className="bg-red-600 text-white px-2 sm:px-4 py-2 sm:py-3">
-  <Marquee speed={60} direction="right">
-    <span className="font-bold text-xs sm:text-sm md:text-base lg:text-lg">
-      DO NOT CLOSE THIS PAGE! YOUR REGISTRATION IS NOT COMPLETE YET...
-    </span>
-  </Marquee>
-</div>
+          <Marquee speed={60} direction="right">
+            <span className="font-bold text-xs sm:text-sm md:text-base lg:text-lg">
+              DO NOT CLOSE THIS PAGE! YOUR REGISTRATION IS NOT COMPLETE YET...
+            </span>
+          </Marquee>
+        </div>
 
         {/* Logo Section */}
         <motion.div
@@ -52,30 +58,25 @@ export default function Home() {
           {/* Text */}
           <motion.div className="md:w-1/2" variants={fadeLeft}>
             <h1 className="font-black text-2xl md:text-3xl lg:text-5xl leading-snug">
-              I want to give you an Unfair Advantage to{" "}
-              <span className="text-[#0C7061]">10x your results</span>
+               Launch Your Tax Business for Just $899
             </h1>
             <p className="mt-4 text-lg text-gray-700">
-              Plus a chance to win an all-inclusive trip to have dinner with me in Dubai.
+              Keep 100% of your fees. Get everything you need to start or scale — plus a <span className="font-bold text-[#0C7061]"> Free Website or Free Laptop</span> bonus.
             </p>
-            <p className="mt-2 text-base text-gray-600">
-              Watch the video below to understand how to take this risk-free opportunity.
-            </p>
-
             <motion.div className="my-6 flex flex-col sm:flex-row gap-3" variants={staggerContainer}>
               <motion.button
                 className="py-3 px-4 bg-[#0C7061] text-white rounded-md w-full sm:w-auto"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                VIP Ticket for only $97.00
+                Book Your Free Demo Today
               </motion.button>
               <motion.button
-                className="py-2 px-4 bg-[#2CE9C7] text-black rounded-md w-full sm:w-auto"
+                className="py-3 px-4 bg-[#25dcbb] text-black rounded-md w-full sm:w-auto"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Free Ticket
+                Get Instant Access To Free Toolkit
               </motion.button>
             </motion.div>
           </motion.div>
@@ -83,7 +84,7 @@ export default function Home() {
           {/* Video */}
           <motion.div className="w-full md:w-1/2" variants={fadeRight}>
             <motion.video
-              src="integrity-software-demo-vid.mp4"
+              src="/integrity-software-demo-vid.mp4"
               autoPlay
               loop
               muted
@@ -99,7 +100,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Guarantee Section */}
+      {/* Why Choose Section */}
       <motion.section
         className="bg-[#043805] text-white py-16"
         initial="hidden"
@@ -107,9 +108,9 @@ export default function Home() {
         viewport={{ once: true }}
         variants={staggerContainer}
       >
-        <motion.div className="text-center mb-12" variants={fadeUp}>
-          <h2 className="inline-block mb-6 text-2xl md:text-4xl font-bold">
-            No-Questions-Asked Guarantee
+        <motion.div className="text-center mb-4" variants={fadeUp}>
+          <h2 className="inline-block font-oxanium mb-6 text-2xl md:text-4xl font-bold">
+            Why Choose Integrity Tax Software
             <span className="block w-22 h-1 rounded-full bg-[#00D42A] mx-auto mt-2"></span>
           </h2>
         </motion.div>
@@ -123,63 +124,79 @@ export default function Home() {
           >
             <Image
               src="https://framerusercontent.com/images/aFUZfkn3GwMuRPKSO173C72vs.webp?scale-down-to=512"
-              alt="100% Money Back Guarantee"
+              alt="Integrity Tax Software Demo"
               width={300}
               height={300}
               className="w-56 md:w-72"
             />
           </motion.div>
 
-          {/* Right side - Text + Buttons */}
+          {/* Right side - Text */}
           <motion.div className="text-center md:text-left md:w-1/2" variants={fadeUp}>
-            <p className="mt-6 text-lg leading-relaxed">
-              Join the VIP experience today and enjoy it all — 
-              the <span className=" px-1 rounded">exclusive sessions</span>, 
-              private Q&As, insane bonuses, and the full 7-day immersion.
-            </p>
-            <p className="mt-4 text-lg leading-relaxed">
-              And if, up to 7 days after the event ends, you feel it wasn’t worth every penny, 
-              just ask for your money back.
-            </p>
-            <p className="mt-4 text-lg leading-relaxed">
-              No awkward questions. No hoops to jump through. 
-              Just a <span className="px-1 rounded">full refund</span>, straight to your account.
+            <p className="mt-6 text-base leading-relaxed">
+              This isn’t just software — it’s a done-for-you growth system built to scale your tax business.
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 md:justify-start justify-center">
-              <motion.button
-                className="py-3 px-6 bg-[#00D42A] text-black font-semibold rounded-sm w-full sm:w-auto"
-                whileHover={{ scale: 1.05 }}
-              >
-                VIP Ticket for only $97.00
-              </motion.button>
-              <motion.button
-                className="py-3 px-6 bg-white text-[#064507] font-semibold rounded-sm w-full sm:w-auto"
-                whileHover={{ scale: 1.05 }}
-              >
-                Free Ticket
-              </motion.button>
-            </div>
+            <p className="mt-4 text-lg sm:text-xl leading-relaxed font-semibold font-inter">Who Is This For?</p>
+            <ul className="mt-2 space-y-4 text-lg">
+              <li className="flex items-start gap-2">
+                <MoveRight className="mt-1 text-[#00D42A]" />
+                <span>New Tax Preparers starting fresh or side hustling.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <MoveRight className="mt-1 text-[#00D42A]" />
+                <span>Switchers tired of overpriced platforms like Drake, CrossLink, or TaxSlayer Pro.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <MoveRight className="mt-1 text-[#00D42A]" />
+                <span>Service Bureaus managing multiple preparers who need to scale without splitting profits.</span>
+              </li>
+            </ul>
+            <p className="mt-4 text-base leading-relaxed">
+              If you’re ready to keep more of your money and close more clients, this package is for you.
+            </p>
           </motion.div>
         </div>
       </motion.section>
 
-      {/* Other Sections */}
+      {/* How It Works */}
+      <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+        <HowItWorks />
+      </motion.section>
+
+      <div className="border-2 border-black"></div>
+
+      {/* Ticket Selector */}
       <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
         <TicketSelector />
       </motion.section>
 
+      {/* VIP / Bonus Section */}
       <motion.section initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
         <VIPSection />
       </motion.section>
 
+      
+       <motion.section initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+        <ClientTestimonials />
+      </motion.section>
+
+      {/* Urgency / Limited Offer */}
+      <motion.section initial={{ opacity: 0, y: -50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+        <UrgencySection />
+      </motion.section>
+
+
+      {/* FAQ Section */}
       <motion.section initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
         <FAQSection />
       </motion.section>
 
+      {/* Final Launch Offer / Big CTA */}
       <motion.section initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-        <MoneyBackGuarantee />
+        <LaunchOfferSection />
       </motion.section>
+
       <Footer />
     </>
   );

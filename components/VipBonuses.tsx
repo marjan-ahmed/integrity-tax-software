@@ -6,24 +6,24 @@ import { motion } from "framer-motion"
 
 const vipBonuses = [
   {
-    title: "BONUS 1: Extra 7-hours of VIP training",
-    desc: "Double the time. 10x the impact. Seven exclusive, one-hour sessions unlock private access to me before the crowd joins in. Discover strategies, ask questions, start each day with clarity.",
+    title: "BONUS 1: Free Website or Free Laptop (Your Choice)",
+    desc: "Launch with either a professional done-for-you website to attract clients OR a brand-new laptop to run your tax business smoothly.",
   },
   {
-    title: "BONUS 2: Chance of winning a Dubai Dinner",
-    desc: "One lucky VIP will get an all-expenses-paid trip to Dubai for a private dinner. Rub shoulders with successful entrepreneurs and gain life-changing clarity.",
+    title: "BONUS 2: Branded Mobile App + Client Portal",
+    desc: "Stand out from competitors with your own client-facing app and secure portal. Build trust instantly and let clients upload docs & track returns — all under your brand.",
   },
   {
-    title: "BONUS 3: 7 shots at winning a MacBook",
-    desc: "Attend VIP sessions and have 7 chances to win MacBook Airs—over $10,000 in prizes.",
+    title: "BONUS 3: Mentorship & Training Program",
+    desc: "Step-by-step onboarding + mentorship from experienced tax professionals. You’ll know exactly how to launch in 7 days, file returns, and scale without confusion.",
   },
   {
-    title: "BONUS 4: 1-on-1 FaceTime with Me",
-    desc: "Seven VIPs will get personal FaceTime calls to map out their next moves directly with me.",
+    title: "BONUS 4: Done-For-You Marketing Toolkit",
+    desc: "Get our complete plug-and-play marketing kit: pre-made ads, social posts, scripts, and outreach templates — so you can start landing clients on day one.",
   },
   {
-    title: "BONUS 5: Mystery Life-Changing Tool",
-    desc: "Access a powerful tool never released publicly. Shift your thinking, planning, and results with this VIP-only advantage.",
+    title: "BONUS 5: 7-Day Money-Back Guarantee",
+    desc: "Risk-free enrollment. If after 7 days you don’t feel it’s worth every penny, request a refund — no awkward questions, no hoops, just your money back.",
   },
 ]
 
@@ -41,12 +41,11 @@ export default function VIPSection() {
     <section className="relative bg-gradient-to-br from-[#043805] via-[#064a0b] to-black text-white py-12 px-6 md:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-oxanium font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-emerald-300">
-          Why You Should Upgrade to VIP
+          Why You Should Upgrade to Tax Integrity Software
         </h2>
 
         <p className="text-center text-gray-300 max-w-2xl mx-auto mb-12">
-          Last time, only <span className="text-lime-400 font-bold">0.44%</span> of registrants joined VIP. 
-          They got the craziest results with extra sessions. More bonuses. Bigger prizes. New surprise dynamics.
+         5 Exclusive Bonuses When You Join Integrity Today
         </p>
 
         <div className="md:flex md:gap-12">
@@ -93,15 +92,6 @@ export default function VIPSection() {
           </div>
         </div>
 
-        {/* Buttons */}
-        <div className="flex flex-col md:flex-row justify-center gap-6 mt-12">
-          <Button className="bg-lime-500 hover:bg-lime-600 text-black font-bold py-4 px-8 rounded-xl transition-all shadow-lg shadow-lime-500/40">
-            Upgrade to VIP
-          </Button>
-          <Button className="bg-[#064a0b] hover:bg-[#043805] text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg shadow-[#043805]/50">
-            See VIP Results
-          </Button>
-        </div>
       </div>
     </section>
   )

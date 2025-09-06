@@ -7,23 +7,23 @@ import Image from "next/image"
 
 export default function TicketSelector() {
   const freeFeatures = [
-    { text: "Access to all 3 main event days", included: true },
-    { text: "Free Workbooks", included: true },
-    { text: "7 extra private sessions with exclusive content, Q&As and direct access to me", included: false },
-    { text: "Chance of winning an all-paid trip to have a dinner with me in Dubai", included: false },
-    { text: "Shot at $5000 in apple gears", included: false },
-    { text: "Seven chances of winning a 1-to-1 FaceTime call with me", included: false },
-    { text: "A mystery powerful tool only available for the VIPs", included: false },
+    { text: "$1,500–$3,000+ upfront fees", included: false },
+    { text: "Hidden costs & revenue splits (you don’t keep 100% of your fees)", included: false },
+    { text: "No branded client portal or app (generic experience)", included: false },
+    { text: "Limited training & no real mentorship", included: false },
+    { text: "Extra charges for add-ons (marketing, e-filing, updates)", included: false },
+    { text: "No free website, no free laptop", included: false },
+    { text: "You’re just another number in their system", included: false },
   ]
 
   const vipFeatures = [
-    { text: "Access to all 3 main event days", included: true },
-    { text: "VIP Workbooks", included: true },
-    { text: "7 extra private sessions with exclusive content, Q&As and direct access to me", included: true },
-    { text: "Chance of winning an all-paid trip to have a dinner with me in Dubai", included: true },
-    { text: "7 shots at winning a MacBook", included: true },
-    { text: "Seven chances of winning a 1-to-1 FaceTime call with me", included: true },
-    { text: "A mystery powerful tool only available for the VIPs", included: true },
+    { text: "One-time $899 Growth Package", included: true },
+    { text: "Unlimited cloud-based e-filing (no extra charges)", included: true },
+    { text: "Keep 100% of your fees — never split revenue", included: true },
+    { text: "Branded mobile app & client portal included", included: true },
+    { text: "Mentorship & training to launch in 7 days", included: true },
+    { text: "Done-for-you marketing toolkit (ads, posts, scripts)", included: true },
+    { text: "Choose your bonus: Free Website OR Free Laptop", included: true },
   ]
 
   return (
@@ -34,7 +34,7 @@ export default function TicketSelector() {
       }}
     >
       {/* Overlay to lighten the background */}
-      <div className="absolute inset-0 bg-white/30"></div>
+      <div className="absolute inset-0 bg-black/5"></div>
 
       {/* Content */}
       <div className="relative max-w-6xl mx-auto">
@@ -63,8 +63,9 @@ export default function TicketSelector() {
                 <div className="text-4xl sm:text-5xl font-bold font-inter text-white mb-1 sm:mb-2 tracking-tighter">
                   $0
                 </div>
-                <div className="text-lg sm:text-xl font-semibold text-gray-300">FREE TICKET</div>
+                <div className="text-lg sm:text-xl font-semibold text-gray-300">Other Tax Software</div>
               </div>
+              
 
               {/* Features */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
@@ -112,20 +113,17 @@ export default function TicketSelector() {
               {/* Price */}
               <div className="text-center mb-4 sm:mb-6">
                 <div className="text-4xl sm:text-5xl font-bold font-inter text-white mb-1 sm:mb-2 tracking-tighter">
-                  ONLY $97
+                  ONLY $899
                 </div>
-                <div className="text-lg sm:text-xl font-semibold text-amber-200">VIP TICKET</div>
+                <div className="text-lg sm:text-xl font-semibold text-amber-200">Integrity Tax Software</div>
               </div>
+              <div className="border mt-1 mb-2 border-[#5e2708]"></div>
 
               {/* Features */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {vipFeatures.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-2 sm:gap-3">
-                    {idx < 2 ? (
-                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 mt-1 flex-shrink-0" />
-                    ) : (
-                      <Crown className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400 mt-1 flex-shrink-0" />
-                    )}
+                    <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 mt-1 flex-shrink-0" />
                     <span className="text-sm sm:text-[17px] text-white">{feature.text}</span>
                   </div>
                 ))}
@@ -140,8 +138,9 @@ export default function TicketSelector() {
                   transition-all duration-500 ease-in-out mb-2 sm:mb-4"
                 size="lg"
               >
-                <span className="relative z-10">YES, I WANT THE VIP TICKET FOR $97</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
+<span className="relative z-10 text-xs sm:text-base md:text-lg lg:text-xl font-semibold text-center block px-2 sm:px-4 md:px-6 lg:px-8">
+  YES, I WANT INTEGRITY TAX SOFTWARE FOR $899
+</span>                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
               </Button>
               <p className="text-xs sm:text-sm text-amber-200 mt-2 text-center">
@@ -151,15 +150,6 @@ export default function TicketSelector() {
           </SpotlightCard>
         </div>
 
-        {/* Bottom Message */}
-        <div className="text-center text-gray-00 px-4 sm:px-0">
-          <p className="mb-1 sm:mb-2 text-sm sm:text-base">
-            Regardless of which ticket you choose, make sure to join the WhatsApp group.
-          </p>
-          <p className="font-semibold text-sm sm:text-base">
-            It's the only way to <span className="underline">access all the content</span>.
-          </p>
-        </div>
       </div>
     </div>
   )

@@ -1,28 +1,29 @@
 'use client'
+
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const faqs = [
   {
-    question: "What exactly do I get if I join VIP?",
-    answer: "As a VIP, you unlock 7 private sessions with Iman before the main event, early access to powerful strategies, and direct Q&A time every day. You also enter to win prizes like a dinner in Dubai, $5,000 in Apple gear, and one-on-one FaceTime calls. Plus, you'll access a private tool never released publicly."
+    question: "What exactly do I get for $899?",
+    answer: "You get the full Growth Package: cloud-based tax software with unlimited e-filing, a branded client portal & mobile app, mentorship & training to launch fast, and a done-for-you marketing toolkit (ads, posts, scripts). Plus, choose your bonus: Free Website or Free Laptop."
   },
   {
-    question: "What if I can’t make it live to every private session?",
-    answer: "No problem. All VIP sessions will be recorded and available inside Whop. You can watch or rewatch them on your schedule, without missing a beat."
+    question: "I’m new (no EFIN yet). Can I still join?",
+    answer: "Yes. Start with the Free Demo to see how it all works. When you’re ready, we’ll guide you through the setup path (including the steps to obtain EFIN), outline exactly what to do, and help you get operational—so you can start filing and keep 100% of your fees."
   },
   {
-    question: "Is this really worth it if I already have the free ticket?",
-    answer: "Absolutely. The free ticket gives you access to the 3-day event. But VIP is an entirely different experience—longer, deeper, and way more exclusive. You get the kind of access, coaching, and opportunities that simply don’t exist anywhere else in the event."
+    question: "I’m switching from Drake/CrossLink/TaxSlayer. How hard is it?",
+    answer: "Straightforward. On onboarding, we’ll map your current workflow, help you move client lists (e.g., via export/import or structured templates), and get you live quickly. You’ll keep your client relationships and gain a modern portal/app experience without the bloat or revenue splits."
   },
   {
-    question: "How long do I have to decide joining VIP?",
-    answer: "This is a one-time offer. Once you leave this page, the door closes. You either step into the private room now—or watch from the outside later."
+    question: "Are there hidden fees or revenue splits?",
+    answer: "No revenue splits. The whole point is you keep what you charge your clients. The $899 Growth Package is designed to be clear and predictable. You get the software, portal/app, training, and marketing toolkit—no nickel-and-diming on the essentials you need to launch and scale."
   },
   {
-    question: "Will I definitely win the dinner in Dubai or the Apple bundle?",
-    answer: "The Dubai dinner and Apple gear are exclusive prizes for VIPs—but they’re not random giveaways. Every VIP who completes the action steps we give during the 7 days and submits them to our team will be eligible. At the end of the event, we’ll review all the submissions and choose the winners based on commitment, effort, and execution. If you show up, do the work, and stand out—you could be boarding a plane to Dubai."
+    question: "How fast can I launch—and is there a guarantee?",
+    answer: "Most users launch within 7 days after onboarding. Book your demo, pick your bonus (Free Website or Free Laptop), and we’ll map a step-by-step plan. And yes—there’s a simple money-back guarantee: if you don’t feel it’s worth it shortly after joining, tell us and we’ll make it right."
   },
 ]
 
@@ -36,15 +37,15 @@ export default function FAQSection() {
   const slideRight = { hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }, exit: { opacity: 0, x: 50, transition: { duration: 0.6 } } }
 
   return (
-    <section
-      className="relative py-12 px-6 md:px-12 text-gray-800"
+    <div
+      className="relative py-12 px-4 sm:px-6 md:px-12 text-gray-800"
       style={{
         backgroundImage: "url('images/bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      {/* Light overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-white/40"></div>
 
       <div className="relative max-w-3xl mx-auto text-center">
@@ -64,30 +65,30 @@ export default function FAQSection() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="border border-gray-200 rounded-2xl shadow-lg p-8 text-left bg-white/90"
+              className="border border-gray-200 rounded-2xl shadow-lg p-6 sm:p-8 text-left bg-white/90"
               style={{ perspective: 1000, transformStyle: 'preserve-3d'}}
             >
-              <h3 className="text-xl font-semibold mb-4 text-[#1A331C]">{faqs[currentIndex].question}</h3>
-              <p className="text-gray-700 whitespace-pre-line">{faqs[currentIndex].answer}</p>
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-[#1A331C]">{faqs[currentIndex].question}</h3>
+              <p className="text-sm sm:text-base text-gray-700 whitespace-pre-line">{faqs[currentIndex].answer}</p>
             </motion.div>
           </AnimatePresence>
 
           {/* Navigation Buttons */}
           <motion.button
             onClick={prevFAQ}
-            className="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-[#1A331C] text-white rounded-full p-2 shadow-lg sm:-left-4"
+            className="absolute top-1/2 -left-4 sm:-left-6 transform -translate-y-1/2 bg-[#1A331C] text-white rounded-full p-2 sm:p-3 shadow-lg"
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.95 }}
           >
-            <ChevronLeft size={24} />
+            <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
           </motion.button>
           <motion.button
             onClick={nextFAQ}
-            className="absolute top-1/2 -right-6 transform -translate-y-1/2 bg-[#1A331C] text-white rounded-full p-2 shadow-lg sm:-right-4"
+            className="absolute top-1/2 -right-4 sm:-right-6 transform -translate-y-1/2 bg-[#1A331C] text-white rounded-full p-2 sm:p-3 shadow-lg"
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.95 }}
           >
-            <ChevronRight size={24} />
+            <ChevronRight size={20} className="sm:w-6 sm:h-6" />
           </motion.button>
         </div>
 
@@ -103,6 +104,6 @@ export default function FAQSection() {
           ))}
         </div>
       </div>
-    </section>
+      </div>
   )
 }
