@@ -122,7 +122,7 @@ export default function Home() {
             whileHover={{ scale: 1.05 }}
           >
             <Image
-              src="/images/guarantee.png"
+              src="https://framerusercontent.com/images/aFUZfkn3GwMuRPKSO173C72vs.webp?scale-down-to=512"
               alt="100% Money Back Guarantee"
               width={300}
               height={300}
