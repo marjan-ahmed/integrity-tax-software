@@ -32,13 +32,22 @@ export default function FAQSection() {
   const nextFAQ = () => setCurrentIndex((prev) => (prev + 1) % faqs.length)
   const prevFAQ = () => setCurrentIndex((prev) => (prev - 1 + faqs.length) % faqs.length)
 
-  // Variants for sliding animation
   const slideLeft = { hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }, exit: { opacity: 0, x: -50, transition: { duration: 0.6 } } }
   const slideRight = { hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.6 } }, exit: { opacity: 0, x: 50, transition: { duration: 0.6 } } }
 
   return (
-    <section className="bg-gray-50 py-12 px-6 md:px-12 text-gray-800">
-      <div className="max-w-3xl mx-auto text-center">
+    <section
+      className="relative py-12 px-6 md:px-12 text-gray-800"
+      style={{
+        backgroundImage: "url('/images/bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Light overlay */}
+      <div className="absolute inset-0 bg-white/40"></div>
+
+      <div className="relative max-w-3xl mx-auto text-center">
         <motion.h2
           className="text-3xl md:text-4xl font-bold mb-12 font-oxanium"
           initial={{ opacity: 0, y: -20 }}
@@ -55,8 +64,8 @@ export default function FAQSection() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="bg-white border border-gray-200 rounded-2xl shadow-lg p-8 text-left"
-              style={{ perspective: 1000, transformStyle: 'preserve-3d' }}
+              className="border border-gray-200 rounded-2xl shadow-lg p-8 text-left bg-white/90"
+              style={{ perspective: 1000, transformStyle: 'preserve-3d'}}
             >
               <h3 className="text-xl font-semibold mb-4 text-[#1A331C]">{faqs[currentIndex].question}</h3>
               <p className="text-gray-700 whitespace-pre-line">{faqs[currentIndex].answer}</p>

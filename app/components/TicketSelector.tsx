@@ -1,4 +1,5 @@
 'use client'
+
 import { Button } from "@/components/ui/button"
 import { Check, X, Crown } from "lucide-react"
 import SpotlightCard from "@/components/SpotlightCard"
@@ -26,8 +27,17 @@ export default function TicketSelector() {
   ]
 
   return (
-    <div className="min-h-screen mt-10 p-4 sm:p-6 md:p-8 lg:p-12">
-      <div className="max-w-6xl mx-auto">
+    <div
+      className="relative min-h-screen p-4 sm:p-6 md:p-8 lg:p-12 bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/images/bg.jpg')", // local image from public folder
+      }}
+    >
+      {/* Overlay to lighten the background */}
+      <div className="absolute inset-0 bg-white/30"></div>
+
+      {/* Content */}
+      <div className="relative max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 px-4 sm:px-0">
           <h1
@@ -41,9 +51,9 @@ export default function TicketSelector() {
         {/* Ticket Cards */}
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 mb-8">
           {/* Free Ticket */}
-            <SpotlightCard spotlightColor={`rgba(${255}, ${255}, ${255}, ${0.2})`}>
+          <SpotlightCard spotlightColor={`rgba(${255}, ${255}, ${255}, ${0.2})`}>
             <div className="bg-gray-900 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
-              {/* Images only */}
+              {/* Images */}
               <div className="flex justify-center gap-2 mb-4 sm:mb-6 flex-wrap">
                 <Image src="https://framerusercontent.com/images/No59q0MYBD6WnPgNeocEAw2WE.svg" width={80} height={80} alt="Online Icon 1" />
               </div>
@@ -92,9 +102,9 @@ export default function TicketSelector() {
           </SpotlightCard>
 
           {/* VIP Ticket */}
-            <SpotlightCard spotlightColor={`rgba(${255}, ${215}, ${0}, ${0.15})`}>
+          <SpotlightCard spotlightColor={`rgba(${255}, ${215}, ${0}, ${0.15})`}>
             <div className="bg-gradient-to-br from-amber-900 to-amber-800 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
-              {/* Images only */}
+              {/* Images */}
               <div className="flex justify-center gap-2 mb-4 sm:mb-6 flex-wrap">
                 <Image src="https://framerusercontent.com/images/XbYjsQ2s0R1UTlvppBdV36kGwgc.png" width={80} height={80} alt="Online Icon 1" />
               </div>
