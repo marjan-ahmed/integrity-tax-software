@@ -83,7 +83,7 @@ export default function Home() {
           {/* Video */}
           <motion.div className="w-full md:w-1/2" variants={fadeRight}>
             <motion.video
-              src="/integrity-software-demo-vid.mp4"
+              src="integrity-software-demo-vid.mp4"
               autoPlay
               loop
               muted
