@@ -58,7 +58,7 @@ export default function VIPSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.2 }}
-                className="relative p-6 rounded-[2rem] bg-gradient-to-tl from-[#064a0b] via-[#043805] to-[#0a2a03] shadow-2xl border border-white/10 hover:scale-[1.03] hover:shadow-lime-500/50 transition-transform duration-500 cursor-pointer"
+                className="relative p-6 rounded-[1rem] bg-gradient-to-tl from-[#064a0b] via-[#043805] to-[#0a2a03] shadow-xl border border-white/10 hover:scale-[1.03]  transition-transform duration-500 cursor-pointer"
               >
                 {/* Diagonal Accent */}
                 <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#1FFACF]/20 rotate-45 rounded-lg pointer-events-none"></div>

@@ -57,22 +57,22 @@ export default function Home() {
         >
           {/* Text */}
           <motion.div className="md:w-1/2" variants={fadeLeft}>
-            <h1 className="font-black text-2xl md:text-3xl lg:text-5xl leading-snug">
-               Launch Your Tax Business for Just $899
+            <h1 className="font-black font-oxanium text-4xl md:text-3xl lg:text-5xl leading-snug">
+               Launch Your Tax Business for Just <span className="font-inter">$899</span>
             </h1>
-            <p className="mt-4 text-lg text-gray-700">
+            <p className="mt-4 font-inter text-lg text-gray-700">
               Keep 100% of your fees. Get everything you need to start or scale — plus a <span className="font-bold text-[#0C7061]"> Free Website or Free Laptop</span> bonus.
             </p>
             <motion.div className="my-6 flex flex-col sm:flex-row gap-3" variants={staggerContainer}>
               <motion.button
-                className="py-3 px-4 bg-[#0C7061] text-white rounded-md w-full sm:w-auto"
+                className="py-3 px-4 font-inter bg-[#0C7061] text-white rounded-md w-full sm:w-auto"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Book Your Free Demo Today
               </motion.button>
               <motion.button
-                className="py-3 px-4 bg-[#25dcbb] text-black rounded-md w-full sm:w-auto"
+                className="py-3 px-4 font-inter bg-[#25dcbb] text-black rounded-md w-full sm:w-auto"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
