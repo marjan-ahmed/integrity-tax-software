@@ -44,26 +44,22 @@ export default function TicketSelector() {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 font-oxanium 
               bg-gradient-to-r from-black to-gray-500 bg-clip-text text-transparent"
           >
-            Select your Ticket Type below:
+            One Package. Unlimited Returns. The Only Growth System Built for Tax Pros.
           </h1>
         </div>
 
         {/* Ticket Cards */}
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 mb-8">
           {/* Free Ticket */}
-          <SpotlightCard spotlightColor={`rgba(${255}, ${255}, ${255}, ${0.2})`}>
+          <SpotlightCard className="border-4 rounded-3xl shadow-lg border-[#2f3d5f]" spotlightColor={`rgba(${255}, ${255}, ${255}, ${0.2})`}>
             <div className="bg-gray-900 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
-              {/* Images */}
-              <div className="flex justify-center gap-2 mb-4 sm:mb-6 flex-wrap">
-                <Image src="https://framerusercontent.com/images/No59q0MYBD6WnPgNeocEAw2WE.svg" width={80} height={80} alt="Online Icon 1" />
-              </div>
 
               {/* Price */}
               <div className="text-center mb-4 sm:mb-6">
                 <div className="text-4xl sm:text-5xl font-bold font-inter text-white mb-1 sm:mb-2 tracking-tighter">
-                  $0
+                  $3K+
                 </div>
-                <div className="text-lg sm:text-xl font-semibold text-gray-300">Other Tax Software</div>
+                <div className="text-lg sm:text-xl font-semibold text-gray-300">Other Tax Softwares</div>
               </div>
               
 
@@ -92,23 +88,16 @@ export default function TicketSelector() {
                   transition-all duration-500 ease-in-out mb-2 sm:mb-4"
                 size="lg"
               >
-                <span className="relative z-10">NO, I WANT TO KEEP MY FREE TICKET</span>
+                <span className="relative z-10 uppercase">I am stucked, show me your demo</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
               </Button>
-              <p className="text-xs sm:text-sm text-gray-400 mt-2 text-center">
-                You'll get redirected to the thank you page to get the WhatsApp Group link.
-              </p>
             </div>
           </SpotlightCard>
 
           {/* VIP Ticket */}
-          <SpotlightCard spotlightColor={`rgba(${255}, ${215}, ${0}, ${0.15})`}>
+          <SpotlightCard className="bg-yellow-800 border-4 rounded-3xl shadow-lg border-[#b19517]" spotlightColor={`rgba(${255}, ${215}, ${0}, ${0.15})`}>
             <div className="bg-gradient-to-br from-amber-900 to-amber-800 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
-              {/* Images */}
-              <div className="flex justify-center gap-2 mb-4 sm:mb-6 flex-wrap">
-                <Image src="https://framerusercontent.com/images/XbYjsQ2s0R1UTlvppBdV36kGwgc.png" width={80} height={80} alt="Online Icon 1" />
-              </div>
 
               {/* Price */}
               <div className="text-center mb-4 sm:mb-6">
@@ -143,9 +132,6 @@ export default function TicketSelector() {
 </span>                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
               </Button>
-              <p className="text-xs sm:text-sm text-amber-200 mt-2 text-center">
-                You'll get redirected to the checkout page to complete your enrollment.
-              </p>
             </div>
           </SpotlightCard>
         </div>

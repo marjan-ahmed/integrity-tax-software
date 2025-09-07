@@ -13,7 +13,7 @@ interface SpotlightCardProps extends React.PropsWithChildren {
 
 const SpotlightCard: React.FC<SpotlightCardProps> = ({
   children,
-  className = "border-2 border-yellow-400 relative rounded-2xl shadow-[0_10px_20px_rgba(0,0,0,0.5),0_6px_6px_rgba(0,0,0,0.4)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3),0_10px_15px_rgba(0,0,0,0.5)] transform transition-all duration-500 ease-in-out overflow-hidden",
+  className = "relative rounded-2xl shadow-[0_10px_20px_rgba(0,0,0,0.5),0_6px_6px_rgba(0,0,0,0.4)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.3),0_10px_15px_rgba(0,0,0,0.5)] transform transition-all duration-500 ease-in-out overflow-hidden",
   spotlightColor = "rgba(255, 255, 255, 0.15)",
 }) => {
   const divRef = useRef<HTMLDivElement>(null);
@@ -66,11 +66,6 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
       style={{
         transform: `perspective(1000px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg) scale3d(1, 1, 1)`,
         transition: "transform 0.2s ease-out",
-        // Glass effect
-        background: "rgba(255, 255, 255, 0.1)",
-        backdropFilter: "blur(10px)",
-        WebkitBackdropFilter: "blur(10px)",
-        border: "1px solid rgba(255, 255, 255, 0.2)",
       }}
     >
       {/* Spotlight glow */}
