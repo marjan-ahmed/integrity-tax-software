@@ -12,6 +12,7 @@ import { motion, useReducedMotion } from "framer-motion"
 import Footer from "@/components/Footer"
 import { MoveRight } from "lucide-react"
 import ClientTestimonials from "./components/ClientTestimonials"
+import Link from "next/link"
 
 export default function Home() {
   const shouldReduceMotion = useReducedMotion()
@@ -36,13 +37,13 @@ export default function Home() {
     <>
       {/* Top Marquee */}
       <section>
-        <div className="bg-red-600 text-white px-2 sm:px-4 py-2 sm:py-3">
+        {/* <div className="bg-red-600 text-white px-2 sm:px-4 py-2 sm:py-3">
           <Marquee speed={50} direction="right" gradient={false}>
             <span className="font-bold text-xs sm:text-sm md:text-base lg:text-lg">
               DO NOT CLOSE THIS PAGE! YOUR REGISTRATION IS NOT COMPLETE YET...
             </span>
           </Marquee>
-        </div>
+        </div> */}
         {/* Hero Section */}
         <motion.div
           className="flex flex-col md:flex-row justify-between items-center gap-10 max-w-7xl mx-auto px-6 my-14"
@@ -61,13 +62,15 @@ export default function Home() {
               <span className="font-bold text-[#0C7061]">Free Laptop</span> bonus.
             </p>
             <div className="my-6 flex flex-col sm:flex-row gap-3">
-              <motion.button
-                className="py-3 px-4 font-inter bg-[#0C7061] text-white rounded-md w-full sm:w-auto"
-                whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
-                whileTap={{ scale: 0.97 }}
-              >
-                Book Your Free Demo Today
-              </motion.button>
+              <Link href={"/book-demo"} passHref>
+      <motion.button
+        className="py-3 px-4 font-inter bg-[#0C7061] text-white rounded-md w-full sm:w-auto"
+        whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
+        whileTap={{ scale: 0.97 }}
+      >
+        Book Your Free Demo Today
+      </motion.button>
+    </Link>
               <motion.button
                 className="py-3 px-4 font-inter bg-[#25dcbb] text-black rounded-md w-full sm:w-auto"
                 whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
