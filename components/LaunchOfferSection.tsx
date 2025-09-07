@@ -33,7 +33,7 @@ export default function LaunchOfferSection() {
         </motion.p>
 
         <motion.button
-          className="inline-flex items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold rounded-lg px-6 sm:px-8 py-4 sm:py-5 text-lg sm:text-xl shadow-lg transition-all duration-300"
+          className="inline-flex font-inter items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold rounded-lg px-6 sm:px-8 py-4 sm:py-5 text-lg sm:text-xl shadow-lg transition-all duration-300"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
