@@ -43,22 +43,6 @@ export default function Home() {
             </span>
           </Marquee>
         </div>
-
-        {/* Logo Section */}
-        <motion.div
-          className="py-2 border flex flex-col justify-center items-center"
-          initial="hidden"
-          animate="visible"
-          variants={fade}
-        >
-          <Image
-            src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/GcSAVqax8JVAKDL4VpBK/media/686e6879933498e4e5b51ef5.webp"
-            alt="Integrity Tax Software"
-            width={80}
-            height={80}
-          />
-        </motion.div>
-
         {/* Hero Section */}
         <motion.div
           className="flex flex-col md:flex-row justify-between items-center gap-10 max-w-7xl mx-auto px-6 my-14"
@@ -208,7 +192,7 @@ export default function Home() {
         <LaunchOfferSection />
       </motion.section>
 
-      <Footer />
+
     </>
   )
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Inter, Oxanium } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
+import Image from "next/image";
 
 const oxanium = Oxanium({
   subsets: ["latin"],
@@ -41,7 +43,21 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${oxanium.variable} antialiased`}
       >
+      
+        {/* Logo Section */}
+        <div
+          className="py-2 border flex flex-col justify-center items-center"
+        >
+          <Image
+            src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/GcSAVqax8JVAKDL4VpBK/media/686e6879933498e4e5b51ef5.webp"
+            alt="Integrity Tax Software"
+            width={80}
+            height={80}
+          />
+        </div>
+
         {children}
+       <Footer />
       </body>
     </html>
   );
