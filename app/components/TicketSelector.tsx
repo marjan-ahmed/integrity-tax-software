@@ -107,7 +107,7 @@ export default function TicketSelector() {
                 </div>
                 <div className="text-lg sm:text-xl font-semibold text-amber-200">Integrity Tax Software</div>
               </div>
-              <div className="border mt-1 mb-2 border-[#5e2708]"></div>
+              <div className="border mt-1.5 mb-2 border-[#672c0b]"></div>
 
               {/* Features */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
