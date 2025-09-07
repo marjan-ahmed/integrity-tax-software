@@ -44,22 +44,23 @@ export default function TicketSelector() {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 font-oxanium 
               bg-gradient-to-r from-black to-gray-500 bg-clip-text text-transparent"
           >
-            One Package. Unlimited Returns. The Only Growth System Built for Tax Pros.
+            Select your Ticket Type below:
           </h1>
         </div>
 
         {/* Ticket Cards */}
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 mb-8">
           {/* Free Ticket */}
-          <SpotlightCard className="border-4 rounded-3xl shadow-lg border-[#2f3d5f]" spotlightColor={`rgba(${255}, ${255}, ${255}, ${0.2})`}>
+          <SpotlightCard spotlightColor={`rgba(${255}, ${255}, ${255}, ${0.2})`}>
             <div className="bg-gray-900 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
+
 
               {/* Price */}
               <div className="text-center mb-4 sm:mb-6">
                 <div className="text-4xl sm:text-5xl font-bold font-inter text-white mb-1 sm:mb-2 tracking-tighter">
                   $3K+
                 </div>
-                <div className="text-lg sm:text-xl font-semibold text-gray-300">Other Tax Softwares</div>
+                <div className="text-lg sm:text-xl font-semibold text-gray-300">Other Tax Software</div>
               </div>
               
 
@@ -88,7 +89,7 @@ export default function TicketSelector() {
                   transition-all duration-500 ease-in-out mb-2 sm:mb-4"
                 size="lg"
               >
-                <span className="relative z-10 uppercase">I am stucked, show me your demo</span>
+                <span className="relative z-10">I AM STUCKED, SHOW ME YOUR DEMO</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
               </Button>
@@ -96,7 +97,7 @@ export default function TicketSelector() {
           </SpotlightCard>
 
           {/* VIP Ticket */}
-          <SpotlightCard className="bg-yellow-800 border-4 rounded-3xl shadow-lg border-[#b19517]" spotlightColor={`rgba(${255}, ${215}, ${0}, ${0.15})`}>
+          <SpotlightCard spotlightColor={`rgba(${255}, ${215}, ${0}, ${0.15})`}>
             <div className="bg-gradient-to-br from-amber-900 to-amber-800 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
 
               {/* Price */}
@@ -127,7 +128,7 @@ export default function TicketSelector() {
                   transition-all duration-500 ease-in-out mb-2 sm:mb-4"
                 size="lg"
               >
-<span className="relative z-10 text-xs sm:text-base md:text-lg font-semibold text-center block px-2 sm:px-4 md:px-6 lg:px-8">
+<span className="relative font-inter font-bold z-10 text-[11.5px] sm:text-base md:text-lg text-center block px-2 sm:px-4 md:px-6 lg:px-8">
   YES, I WANT INTEGRITY TAX SOFTWARE FOR $899
 </span>                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>

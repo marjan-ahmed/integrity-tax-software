@@ -43,11 +43,11 @@ export default function HowItWorks() {
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.6 }}
         >
           How It Works
         </motion.h2>
-        <p className="mt-4 font-inter text-lg md:text-xl text-gray-800">
+        <p className="mt-4 font-inter text-base sm:text-lg md:text-xl text-gray-800">
           Follow these simple steps to get started with your growth package.
         </p>
       </div>
@@ -64,26 +64,30 @@ export default function HowItWorks() {
             return (
               <motion.div
                 key={idx}
-                className={`relative flex flex-col md:flex-row ${
-                  isLeft ? "md:flex-row" : "md:flex-row-reverse"
-                } items-center`}
-                initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
+                className={`relative flex flex-col items-center text-center 
+                  md:text-left md:flex-row ${isLeft ? "md:flex-row" : "md:flex-row-reverse"}`}
+                initial={{ opacity: 0, x: isLeft ? -40 : 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: idx * 0.2 }}
+                transition={{ duration: 0.6, delay: idx * 0.2 }}
               >
                 {/* Step number circle */}
-                <div className={`flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center ${step.color} text-white font-bold text-xl z-10`}>
+                <div
+                  className={`flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center 
+                  ${step.color} text-white font-bold text-lg sm:text-xl z-10`}
+                >
                   {idx + 1}
                 </div>
 
                 {/* Step card */}
-                <div className="bg-white/90 text-black shadow-lg rounded-2xl p-6 mt-6 md:mt-0 md:w-3/4 mx-0 md:mx-6 backdrop-blur-sm">
-                  <div className="flex items-center gap-4">
-                    <Icon className={`w-8 h-8 ${step.color}`} />
-                    <h3 className="text-xl font-semibold">{step.title}</h3>
+                <div className="bg-white/90 text-black shadow-lg rounded-2xl p-4 sm:p-6 mt-4 md:mt-0 md:w-3/4 mx-0 md:mx-6 backdrop-blur-sm">
+                  <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4">
+                    <Icon className={`w-6 h-6 sm:w-8 sm:h-8 ${step.color}`} />
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-semibold">{step.title}</h3>
+                      <p className="mt-2 text-gray-700 text-sm sm:text-base">{step.description}</p>
+                    </div>
                   </div>
-                  <p className="mt-2 text-gray-700">{step.description}</p>
                 </div>
               </motion.div>
             );
