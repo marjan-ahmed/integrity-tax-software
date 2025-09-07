@@ -39,12 +39,12 @@ export default function TicketSelector() {
       {/* Content */}
       <div className="relative max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12 px-4 sm:px-0">
+        <div className="text-center mt-4 mb-12 px-4 sm:px-0">
           <h1
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 font-oxanium 
               bg-gradient-to-r from-black to-gray-500 bg-clip-text text-transparent"
           >
-            Select your Ticket Type below:
+            One Package. Unlimited Returns. The Only Growth System Built for Tax Pros.
           </h1>
         </div>
 
