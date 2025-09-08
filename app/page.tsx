@@ -9,7 +9,6 @@ import HowItWorks from "./components/HowItWorks"
 import UrgencySection from "./components/Urgency"
 import LaunchOfferSection from "@/components/LaunchOfferSection"
 import { motion, useReducedMotion } from "framer-motion"
-import Footer from "@/components/Footer"
 import { MoveRight } from "lucide-react"
 import ClientTestimonials from "./components/ClientTestimonials"
 import Link from "next/link"
@@ -89,7 +88,6 @@ export default function Home() {
     </div>
   </motion.div>
 
-          {/* Video (no motion wrapper for responsiveness) */}
           <div className="w-full md:w-1/2">
             <video
               src="/integrity-software-demo-vid.mp4"
