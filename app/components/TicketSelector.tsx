@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Check, X, Crown } from "lucide-react"
 import SpotlightCard from "@/components/SpotlightCard"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function TicketSelector() {
   const freeFeatures = [
@@ -17,7 +18,7 @@ export default function TicketSelector() {
   ]
 
   const vipFeatures = [
-    { text: "One-time $899 Growth Package", included: true },
+    { text: "One time Growth Package", included: true },
     { text: "Unlimited cloud-based e-filing (no extra charges)", included: true },
     { text: "Keep 100% of your fees — never split revenue", included: true },
     { text: "Branded mobile app & client portal included", included: true },
@@ -81,6 +82,7 @@ export default function TicketSelector() {
               </div>
 
               {/* Button */}
+              <Link href={'/booking'}>
               <Button
                 className="relative h-10 sm:h-12 w-full text-black font-bold font-inter text-sm sm:text-lg rounded-lg overflow-hidden 
                   bg-gradient-to-r from-yellow-300 via-yellow-500 to-[#FEFE8B] 
@@ -93,6 +95,7 @@ export default function TicketSelector() {
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
               </Button>
+              </Link>
             </div>
           </SpotlightCard>
 
@@ -120,6 +123,7 @@ export default function TicketSelector() {
               </div>
 
               {/* Button */}
+              <Link href={'/booking'}>
               <Button
                 className="relative h-10 sm:h-12 w-full text-black font-bold font-inter text-sm sm:text-lg rounded-lg overflow-hidden 
                   bg-gradient-to-r from-yellow-300 via-yellow-500 to-[#FEFE8B] 
@@ -133,6 +137,7 @@ export default function TicketSelector() {
 </span>                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
               </Button>
+              </Link>
             </div>
           </SpotlightCard>
         </div>

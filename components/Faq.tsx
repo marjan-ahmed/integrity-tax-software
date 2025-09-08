@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const faqs = [
   {
-    question: "What exactly do I get after signing up?",
+    question: "What exactly do I get in this growth package?",
     answer: "You get the full Growth Package: cloud-based tax software with unlimited e-filing, a branded client portal & mobile app, mentorship & training to launch fast, and a done-for-you marketing toolkit (ads, posts, scripts). Plus, choose your bonus: Free Website or Free Laptop."
   },
   {
@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     question: "Are there hidden fees or revenue splits?",
-    answer: "No revenue splits. The whole point is you keep what you charge your clients. The $899 Growth Package is designed to be clear and predictable. You get the software, portal/app, training, and marketing toolkit—no nickel-and-diming on the essentials you need to launch and scale."
+    answer: "No revenue splits. The whole point is you keep what you charge your clients. The Growth Package is designed to be clear and predictable. You get the software, portal/app, training, and marketing toolkit—no nickel-and-diming on the essentials you need to launch and scale."
   },
   {
     question: "How fast can I launch—and is there a guarantee?",

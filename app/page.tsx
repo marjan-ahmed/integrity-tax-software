@@ -46,40 +46,48 @@ export default function Home() {
         </div> */}
         {/* Hero Section */}
         <motion.div
-          className="flex flex-col md:flex-row justify-between items-center gap-10 max-w-7xl mx-auto px-6 my-14"
-          variants={staggerContainer}
-          initial="hidden"
-          animate="visible"
+  className="flex flex-col md:flex-row justify-between items-center gap-10 max-w-7xl mx-auto px-6 my-14"
+  variants={staggerContainer}
+  initial="hidden"
+  animate="visible"
+>
+  {/* Text */}
+  <motion.div className="md:w-1/2" variants={fade}>
+    <h1 className="font-black font-oxanium text-4xl md:text-5xl lg:text-6xl leading-tight sm:leading-snug md:leading-snug">
+      Launch Your Tax Business Today
+    </h1>
+
+    {/* Added Price Text */}
+    <p className="mt-2 font-inter text-xl font-semibold text-[#0C7061]">
+      Starting from $199
+    </p>
+
+    <p className="mt-4 font-inter text-lg text-gray-700">
+      Keep 100% of your fees. Get everything you need to start or scale — plus a{" "}
+      <span className="font-bold">Free Website</span> or{" "}
+      <span className="font-bold">Free Laptop</span> bonus.
+    </p>
+    <div className="my-6 flex flex-col sm:flex-row gap-3">
+      <Link href={"/booking"} passHref>
+        <motion.button
+          className="py-3 px-4 font-inter bg-[#0C7061] text-white rounded-md w-full sm:w-auto"
+          whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
+          whileTap={{ scale: 0.97 }}
         >
-          {/* Text */}
-          <motion.div className="md:w-1/2" variants={fade}>
-            <h1 className="font-black font-oxanium text-4xl md:text-5xl lg:text-6xl leading-tight sm:leading-snug md:leading-snug">
-              Launch Your Tax Business Today
-            </h1>
-            <p className="mt-4 font-inter text-lg text-gray-700">
-              Starting from $199. Keep 100% of your fees. Get everything you need to start or scale — plus a{" "}
-              <span className="font-bold text-[#0C7061]">Free Website</span> or{" "}
-              <span className="font-bold text-[#0C7061]">Free Laptop</span> bonus.
-            </p>
-            <div className="my-6 flex flex-col sm:flex-row gap-3">
-              <Link href={"https://api.taxnitro.com/widget/form/J76xx1qIettzVEewiapI?notrack=true"} passHref>
-      <motion.button
-        className="py-3 px-4 font-inter bg-[#0C7061] text-white rounded-md w-full sm:w-auto"
-        whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
-        whileTap={{ scale: 0.97 }}
-      >
-        Book Your Free Demo Today
-      </motion.button>
-    </Link>
-              <motion.button
-                className="py-3 px-4 font-inter bg-[#25dcbb] text-black rounded-md w-full sm:w-auto"
-                whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
-                whileTap={{ scale: 0.97 }}
-              >
-                Get Instant Access To Free Toolkit
-              </motion.button>
-            </div>
-          </motion.div>
+          Book Your Free Demo Today
+        </motion.button>
+      </Link>
+      <Link href={'/https://api.taxnitro.com/widget/form/J76xx1qIettzVEewiapI?notrack=true'}>
+        <motion.button
+          className="py-3 px-4 font-inter bg-[#25dcbb] text-black rounded-md w-full sm:w-auto"
+          whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
+          whileTap={{ scale: 0.97 }}
+        >
+          Get Instant Access To Free Toolkit
+        </motion.button>
+      </Link>
+    </div>
+  </motion.div>
 
           {/* Video (no motion wrapper for responsiveness) */}
           <div className="w-full md:w-1/2">
@@ -117,7 +125,7 @@ export default function Home() {
     {/* Left side - Image */}
     <motion.div className="flex justify-center md:w-1/2" variants={fade}>
       <Image
-        src="https://framerusercontent.com/images/aFUZfkn3GwMuRPKSO173C72vs.webp?scale-down-to=512"
+        src="/images/money-back-guanrantee.png"
         alt="Integrity Tax Software Demo"
         width={300}
         height={300}

@@ -6,7 +6,7 @@ import { Calendar, Gift, Rocket } from "lucide-react";
 const steps = [
   {
     title: "Schedule Your Free Demo",
-    description: "See how the $899 Growth Package works for you.",
+    description: "See how this Growth Package works for you.",
     icon: Calendar,
     color: "bg-green-500"
   },

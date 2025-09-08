@@ -2,6 +2,7 @@
 
 import { ArrowRight, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function LaunchOfferSection() {
   return (
@@ -29,9 +30,10 @@ export default function LaunchOfferSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Don’t get stuck paying more to platforms that take your profits. Get Integrity Tax Software’s all-in-one growth package starting from $199 and claim your free bonus today.
+          Don’t get stuck paying more to platforms that take your profits. Get Integrity Tax Software’s all-in-one growth package starts from $199 and claim your free bonus today.
         </motion.p>
 
+        <Link href={'/booking'}>
         <motion.button
           className="inline-flex font-inter items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold rounded-lg px-6 sm:px-8 py-4 sm:py-5 text-md sm:text-xl shadow-lg transition-all duration-300"
           whileHover={{ scale: 1.05 }}
@@ -40,6 +42,7 @@ export default function LaunchOfferSection() {
           Schedule My Free Demo Now
           <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </motion.button>
+        </Link>
 
         {/* Optional rocket icon decoration */}
         <motion.div

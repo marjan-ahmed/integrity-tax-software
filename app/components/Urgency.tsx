@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function UrgencySection() {
   return (
@@ -34,6 +35,7 @@ export default function UrgencySection() {
             This is available only for a short time before tax season rush. Don’t wait — every day you delay, you lose clients.
           </p>
 
+          <Link href={'/booking'}>
           <motion.button
             className="inline-flex font-inter items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-lg px-5 sm:px-6 py-3 sm:py-4 text-base sm:text-lg md:text-xl shadow-lg transition-all duration-300"
             whileHover={{ scale: 1.05 }}
@@ -42,6 +44,7 @@ export default function UrgencySection() {
             Yes, I Want My Free Demo
             <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5" />
           </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>
