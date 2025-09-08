@@ -115,7 +115,7 @@ export default function Home() {
   <motion.div className="text-center mb-8 sm:mb-12" variants={fade}>
     <h2 className="inline-block font-oxanium text-2xl sm:text-3xl md:text-4xl font-bold">
       Why Choose Integrity Tax Software
-      <span className="block w-16 sm:w-20 h-1 rounded-full bg-[#00D42A] mx-auto mt-3"></span>
+      <span className="block w-16 sm:w-20 h-1 rounded-full bg-[#25dcbb] mx-auto mt-3"></span>
     </h2>
   </motion.div>
 
@@ -137,21 +137,21 @@ export default function Home() {
         This isn’t just software — it’s a done-for-you growth system built to scale your tax business.
       </p>
 
-      <p className="mt-6 text-base sm:text-lg md:text-xl font-semibold font-inter">
+      <p className="mt-6 text-md sm:text-lg md:text-xl font-semibold font-inter">
         Who Is This For?
       </p>
 
-      <ul className="mt-3 space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
+      <ul className="mt-3 space-y-3 sm:space-y-4 text-base sm:text-base md:text-lg">
         <li className="flex items-start gap-2">
-          <MoveRight className="mt-1 shrink-0 text-[#00D42A]" size={18} />
+          <MoveRight className="mt-1 shrink-0 text-[#25dcbb]" size={18} />
           <span>New Tax Preparers starting fresh or side hustling.</span>
         </li>
         <li className="flex items-start gap-2">
-          <MoveRight className="mt-1 shrink-0 text-[#00D42A]" size={18} />
+          <MoveRight className="mt-1 shrink-0 text-[#25dcbb]" size={18} />
           <span>Switchers tired of overpriced platforms like Drake, CrossLink, or TaxSlayer Pro.</span>
         </li>
         <li className="flex items-start gap-2">
-          <MoveRight className="mt-1 shrink-0 text-[#00D42A]" size={18} />
+          <MoveRight className="mt-1 shrink-0 text-[#25dcbb]" size={18} />
           <span>Service Bureaus managing multiple preparers who need to scale without splitting profits.</span>
         </li>
       </ul>
