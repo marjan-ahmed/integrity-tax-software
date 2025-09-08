@@ -26,7 +26,7 @@ export default function UrgencySection() {
         >
           <div className="flex items-center justify-center mb-4 gap-2">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold font-oxanium leading-snug">
-              Limited Time Offer: $899 + Free Bonus
+              Limited Time Offer: $199 + Free Bonus
             </h2>
           </div>
 

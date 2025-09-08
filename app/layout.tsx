@@ -4,6 +4,7 @@ import { Inter, Oxanium } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 
 const oxanium = Oxanium({
   subsets: ["latin"],
@@ -48,12 +49,14 @@ export default function RootLayout({
         <div
           className="py-2 border flex flex-col justify-center items-center"
         >
+          <Link href={'/'}>
           <Image
             src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/GcSAVqax8JVAKDL4VpBK/media/686e6879933498e4e5b51ef5.webp"
             alt="Integrity Tax Software"
             width={80}
             height={80}
           />
+          </Link>
         </div>
 
         {children}

@@ -29,7 +29,7 @@ export default function LaunchOfferSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Don’t get stuck paying more to platforms that take your profits. Get Integrity Tax Software’s all-in-one growth package for just $899 and claim your free bonus today.
+          Don’t get stuck paying more to platforms that take your profits. Get Integrity Tax Software’s all-in-one growth package starting from $199 and claim your free bonus today.
         </motion.p>
 
         <motion.button

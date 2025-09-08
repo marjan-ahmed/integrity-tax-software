@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const faqs = [
   {
-    question: "What exactly do I get for $899?",
+    question: "What exactly do I get after signing up?",
     answer: "You get the full Growth Package: cloud-based tax software with unlimited e-filing, a branded client portal & mobile app, mentorship & training to launch fast, and a done-for-you marketing toolkit (ads, posts, scripts). Plus, choose your bonus: Free Website or Free Laptop."
   },
   {

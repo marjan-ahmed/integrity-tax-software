@@ -97,13 +97,13 @@ export default function TicketSelector() {
           </SpotlightCard>
 
           {/* VIP Ticket */}
-          <SpotlightCard spotlightColor={`rgba(${255}, ${215}, ${0}, ${0.15})`}>
+          <SpotlightCard className="bg-yellow-900 rounded-2xl shadow-[0_10px_20px_rgba(0,0,0,0.5),0_6px_6px_rgba(0,0,0,0.4)]" spotlightColor={`rgba(${255}, ${215}, ${0}, ${0.15})`}>
             <div className="bg-gradient-to-br from-amber-900 to-amber-800 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
 
               {/* Price */}
               <div className="text-center mb-4 sm:mb-6">
                 <div className="text-4xl sm:text-5xl font-bold font-inter text-white mb-1 sm:mb-2 tracking-tighter">
-                  ONLY $899
+                  Starting from $199
                 </div>
                 <div className="text-lg sm:text-xl font-semibold text-amber-200">Integrity Tax Software</div>
               </div>
@@ -128,8 +128,8 @@ export default function TicketSelector() {
                   transition-all duration-500 ease-in-out mb-2 sm:mb-4"
                 size="lg"
               >
-<span className="relative font-inter font-bold z-10 text-[11.5px] sm:text-base md:text-lg text-center block px-2 sm:px-4 md:px-6 lg:px-8">
-  YES, I WANT INTEGRITY TAX SOFTWARE FOR $899
+<span className="relative font-inter font-bold z-10 text-xs sm:text-base md:text-lg text-center block px-2 sm:px-4 md:px-6 lg:px-8">
+  YES, I WANT INTEGRITY TAX SOFTWARE
 </span>                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
               </Button>

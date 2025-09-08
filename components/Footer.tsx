@@ -1,23 +1,18 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-gray-700 py-8 text-center font-sans px-4 shadow-inner">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-sm">
-          <a href="#" className="hover:text-gray-900 transition-colors">
-            Privacy Policy
-          </a>
-          <span className="mx-2">|</span>
-          <a href="#" className="hover:text-gray-900 transition-colors">
-            Terms & Conditions
-          </a>
-        </div>
-        <p className="mt-4 text-xs leading-relaxed text-gray-600">
-          This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
-        </p>
-        <p className="mt-2 text-xs text-gray-600">
-          ©2025 Educate.io. All Rights Reserved.
+    <footer className="bg-[#0D6F60] text-white py-8 text-center font-sans px-4 shadow-inner">
+      <div className="max-w-4xl mx-auto flex flex-col items-center justify-center">
+        <Image
+          src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/GcSAVqax8JVAKDL4VpBK/media/686e6879933498e4e5b51ef5.webp"
+          alt="Integrity Tax Software"
+          width={90}
+          height={90}
+        />
+        <p className="mt-2 text-sm sm:text-md font-inter">
+          ©{new Date().getFullYear()} Integrity Tax Software. All Rights Reserved.
         </p>
       </div>
     </footer>

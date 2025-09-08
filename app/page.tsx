@@ -54,15 +54,15 @@ export default function Home() {
           {/* Text */}
           <motion.div className="md:w-1/2" variants={fade}>
             <h1 className="font-black font-oxanium text-4xl md:text-5xl lg:text-6xl leading-tight sm:leading-snug md:leading-snug">
-              Launch Your Tax Business for Just <span className="font-inter">$899</span>
+              Launch Your Tax Business Today
             </h1>
             <p className="mt-4 font-inter text-lg text-gray-700">
-              Keep 100% of your fees. Get everything you need to start or scale — plus a{" "}
+              Starting from $199. Keep 100% of your fees. Get everything you need to start or scale — plus a{" "}
               <span className="font-bold text-[#0C7061]">Free Website</span> or{" "}
               <span className="font-bold text-[#0C7061]">Free Laptop</span> bonus.
             </p>
             <div className="my-6 flex flex-col sm:flex-row gap-3">
-              <Link href={"/book-demo"} passHref>
+              <Link href={"https://api.taxnitro.com/widget/form/J76xx1qIettzVEewiapI?notrack=true"} passHref>
       <motion.button
         className="py-3 px-4 font-inter bg-[#0C7061] text-white rounded-md w-full sm:w-auto"
         whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
