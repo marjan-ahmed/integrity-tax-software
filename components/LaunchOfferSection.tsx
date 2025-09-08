@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function LaunchOfferSection() {
   return (
     <section
-      className="relative py-20 px-6 sm:px-12 md:px-16 text-white bg-gradient-to-br from-[#043805] via-[#064a0b] to-black"
+      className="relative py-20 px-6 sm:px-12 md:px-16 text-white bg-gradient-to-br from-[#0C7061] via-[#0C7061] to-black"
     >
       {/* Overlay for opacity effect */}
       <div className="absolute inset-0 bg-black/40"></div>
@@ -35,7 +35,7 @@ export default function LaunchOfferSection() {
 
         <Link href={'/booking'}>
         <motion.button
-          className="inline-flex font-inter items-center gap-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold rounded-lg px-6 sm:px-8 py-4 sm:py-5 text-md sm:text-xl shadow-lg transition-all duration-300"
+          className="inline-flex font-inter items-center gap-3 bg-[#25DCBB] text-black font-bold rounded-lg px-6 sm:px-8 py-4 sm:py-5 text-md sm:text-xl shadow-lg transition-all duration-300"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -51,7 +51,7 @@ export default function LaunchOfferSection() {
           whileInView={{ scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <Rocket className="w-full h-full text-yellow-500" />
+          <Rocket className="w-full h-full text-[#25DCBB]" />
         </motion.div>
       </div>
     </section>

@@ -106,7 +106,7 @@ export default function Home() {
 
 {/* Why Choose Section */}
 <motion.section
-  className="bg-[#043805] text-white py-12 sm:py-16 px-4 sm:px-6"
+  className="bg-gradient-to-br from-[#07574b] bg-[#096356] text-white py-12 sm:py-16 px-4 sm:px-6"
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true }}

@@ -22,9 +22,9 @@ export default function VIPSection() {
   ]
 
   return (
-    <section className="relative bg-gradient-to-br from-[#043805] via-[#064a0b] to-black text-white py-12 px-6 md:px-12 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#064c42] via-[#0C7061] to-black text-white py-12 px-6 md:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-oxanium font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-lime-400 to-emerald-300">
+        <h2 className="text-4xl md:text-5xl font-oxanium font-bold text-center mb-6 bg-clip-text text-white">
           Why You Should Upgrade to Tax Integrity Software
         </h2>
 
@@ -42,10 +42,10 @@ export default function VIPSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.2 }}
-                className="relative p-6 rounded-[1rem] bg-gradient-to-tl from-[#064a0b] via-[#043805] to-[#0a2a03] shadow-xl border border-white/10 hover:scale-[1.03] transition-transform duration-500 cursor-pointer"
+                className="relative p-6 rounded-[1rem] bg-[#02342c] hover:bg-[#023028] shadow-xl border border-white/10 hover:scale-[1.03] transition-transform duration-500 cursor-pointer"
               >
                 <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#1FFACF]/20 rotate-45 rounded-lg pointer-events-none"></div>
-                <h3 className="text-xl md:text-2xl font-bold text-lime-400 mb-2 z-10 relative">{bonus.title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold font-inter text-[#25DCBB] mb-2 z-10 relative">{bonus.title}</h3>
                 <p className="text-gray-200 text-sm md:text-base z-10 relative">{bonus.desc}</p>
               </motion.div>
             ))}

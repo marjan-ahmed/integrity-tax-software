@@ -1,5 +1,5 @@
 const nextConfig = {
-  output: "export",
+  // output: "export",
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.leadconnectorhq.com' },
