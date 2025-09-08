@@ -95,7 +95,6 @@ export default function Home() {
               loop
               muted
               playsInline
-              controls
               controlsList="nodownload nofullscreen noremoteplayback"
               disablePictureInPicture
               className="w-full h-auto rounded-lg shadow-lg"
