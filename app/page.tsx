@@ -76,7 +76,7 @@ export default function Home() {
           Book Your Free Demo Today
         </motion.button>
       </Link>
-      <Link href={'https://api.taxnitro.com/widget/form/J76xx1qIettzVEewiapI?notrack=true'}>
+      <Link href={'/https://api.taxnitro.com/widget/form/J76xx1qIettzVEewiapI?notrack=true'}>
         <motion.button
           className="py-3 px-4 font-inter bg-[#25dcbb] text-black rounded-md w-full sm:w-auto"
           whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
