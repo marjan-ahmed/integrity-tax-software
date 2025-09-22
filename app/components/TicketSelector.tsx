@@ -106,7 +106,7 @@ export default function TicketSelector() {
               {/* Price */}
               <div className="text-center mb-4 sm:mb-6">
                 <div className="text-4xl sm:text-5xl font-bold font-inter text-white mb-1 sm:mb-2 tracking-tighter">
-                  Starting from $199
+                  Starting from $99
                 </div>
                 <div className="text-lg sm:text-xl font-semibold text-amber-200">Integrity Tax Software</div>
               </div>
