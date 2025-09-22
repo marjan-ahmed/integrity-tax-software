@@ -89,7 +89,7 @@ export default function Home() {
   </motion.div>
 
             <div className="w-full md:w-1/2">
-          <video autoPlay loop controls className="rounded-lg shadow-lg">
+          <video autoPlay loop controls preload="auto" className="rounded-lg shadow-lg">
   <source src="/integrity-software-demo-vid.mp4" type="video/mp4" />
   <source src="/integrity-software-demo-vid.ogg" type="video/ogg" />
   Your browser does not support the video tag.
