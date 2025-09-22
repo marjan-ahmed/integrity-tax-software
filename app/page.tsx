@@ -88,17 +88,18 @@ export default function Home() {
     </div>
   </motion.div>
 
-          <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2">
             <video
               src="/integrity-software-demo-vid.mp4"
               autoPlay
               loop
-            playsInline
+              controls
+              playsInline
               controlsList="nodownload nofullscreen noremoteplayback"
               disablePictureInPicture
               className="w-full h-auto rounded-lg shadow-lg"
             />
-          </div>
+            </div>
         </motion.div>
       </section>
 
