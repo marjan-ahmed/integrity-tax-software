@@ -89,16 +89,16 @@ export default function Home() {
   </motion.div>
 
             <div className="w-full md:w-1/2">
-            <video
-              src="/integrity-software-demo-vid.mp4"
-              autoPlay
-              loop
-              controls
-              playsInline
-              controlsList="nodownload nofullscreen noremoteplayback"
-              disablePictureInPicture
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
+           <video
+  src="/integrity-software-demo-vid.mp4"
+  autoPlay
+  loop
+  playsInline
+  controls
+  controlsList="nodownload nofullscreen noremoteplayback"
+  disablePictureInPicture
+  className="w-full h-auto rounded-lg shadow-lg"
+/>
             </div>
         </motion.div>
       </section>
