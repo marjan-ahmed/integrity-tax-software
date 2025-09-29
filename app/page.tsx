@@ -58,7 +58,7 @@ export default function Home() {
 
     {/* Added Price Text */}
     <p className="mt-2 font-inter  text-xl sm:text-2xl font-semibold text-[#0C7061]">
-      Starting from $99
+      Starting from $199
     </p>
 
     <p className="mt-4 font-inter text-lg text-gray-700">
