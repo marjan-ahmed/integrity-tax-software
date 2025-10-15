@@ -73,14 +73,9 @@ export default function RootLayout({
         </noscript>
 
         {/* Logo Section */}
-        <div className="py-2 border flex flex-col justify-center items-center">
+        <div className="py-2 border flex text-2xl font-bold border-[#14353f] flex-col bg-[#14353f] text-white justify-center items-center">
           <Link href={"/"}>
-            <Image
-              src="https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/GcSAVqax8JVAKDL4VpBK/media/686e6879933498e4e5b51ef5.webp"
-              alt="Integrity Tax Software"
-              width={80}
-              height={80}
-            />
+              SYED SUBHAN ALI
           </Link>
         </div>
 

@@ -8,44 +8,47 @@ import Link from "next/link"
 
 export default function TicketSelector() {
   const freeFeatures = [
-    { text: "$1,500–$3,000+ upfront fees", included: false },
-    { text: "Hidden costs & revenue splits (you don’t keep 100% of your fees)", included: false },
-    { text: "No branded client portal or app (generic experience)", included: false },
-    { text: "Limited training & no real mentorship", included: false },
-    { text: "Extra charges for add-ons (marketing, e-filing, updates)", included: false },
-    { text: "No free website, no free laptop", included: false },
-    { text: "You’re just another number in their system", included: false },
+    { text: "$1,500 – $3,000+ Monthly Retainers per service", included: false },
+    { text: "Hidden costs for Ad setup, Creative refreshes, or reporting", included: false },
+    { text: "No centralized dashboard or real accountability", included: false },
+    { text: "Generic templates and slow response times", included: false },
+    { text: "Pay extra for content, emails, or funnel management", included: false },
+    { text: "Multiple teams, no single strategy", included: false },
+    { text: "You’re managing everyone - instead of running your business", included: false },
+
   ]
 
   const vipFeatures = [
-    { text: "One time Growth Package", included: true },
-    { text: "Unlimited cloud-based e-filing (no extra charges)", included: true },
-    { text: "Keep 100% of your fees — never split revenue", included: true },
-    { text: "Branded mobile app & client portal included", included: true },
-    { text: "Mentorship & training to launch in 7 days", included: true },
-    { text: "Done-for-you marketing toolkit (ads, posts, scripts)", included: true },
-    { text: "Choose your bonus: Free Website OR Free Laptop", included: true },
+    { text: "One system that covers Ads, Content, and Automation", included: true },
+    { text: "Complete setup done for you — Ad Accounts, Funnels, CRM", included: true },
+    { text: "24/7 campaign optimization + Weekly reports", included: true },
+    { text: "100% transparency — you see every lead and sale", included: true },
+    { text: "Branded Social Media Management & Post Creation included", included: true },
+    { text: "Proven Ad templates and Content Strategies for your niche", included: true },
+    { text: "No long-term contracts — results decide the renewal", included: true },
   ]
 
   return (
-    <div
-      className="relative min-h-screen p-4 sm:p-6 md:p-8 lg:p-12 bg-cover bg-center"
+    <div 
+      className="relative min-h-screen p-4 sm:p-6 md:p-8 lg:p-12 bg-gradient-to-br from-[#0f1419] to-[#14353f] overflow-hidden"
       style={{
-        backgroundImage: "url('images/bg.jpg')", // local image from public folder
+        backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+        backgroundSize: "30px 30px",
       }}
     >
-      {/* Overlay to lighten the background */}
-      <div className="absolute inset-0 bg-black/5"></div>
-
+      {/* Dark overlay to ensure readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0f1419]/80 to-[#14353f]/80"></div>
+      
       {/* Content */}
-      <div className="relative max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mt-4 mb-12 px-4 sm:px-0">
+        <div className="text-center mt-4 mb-16 px-4 sm:px-6 lg:px-0">
           <h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 font-oxanium 
-              bg-gradient-to-r from-black to-[#0C7061] bg-clip-text text-transparent"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 font-oxanium leading-tight text-white"
           >
-            One Package. Unlimited Returns. The Only Growth System Built for Tax Pros.
+            Tired of Agencies Overpromising and Underdelivering?
+            <br className="hidden sm:block" />
+            Heal Your Business From the Damage of Bad Marketing.
           </h1>
         </div>
 
@@ -59,9 +62,9 @@ export default function TicketSelector() {
               {/* Price */}
               <div className="text-center mb-4 sm:mb-6">
                 <div className="text-4xl sm:text-5xl font-bold font-inter text-white mb-1 sm:mb-2 tracking-tighter">
-                  $3K+
+                  $3K+ / Month
                 </div>
-                <div className="text-lg sm:text-xl font-semibold text-gray-300">Other Tax Software</div>
+                <div className="text-lg sm:text-xl font-semibold text-gray-300">Hiring Separate Agencies & Freelancers</div>
               </div>
               
 
@@ -70,7 +73,7 @@ export default function TicketSelector() {
                 {freeFeatures.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-2 sm:gap-3">
                     {feature.included ? (
-                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mt-1 flex-shrink-0" />
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-[#6A98FF] mt-1 flex-shrink-0" />
                     ) : (
                       <X className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 mt-1 flex-shrink-0" />
                     )}
@@ -82,7 +85,7 @@ export default function TicketSelector() {
               </div>
 
               {/* Button */}
-              <Link href={'/booking'}>
+              <Link href={'https://calendly.com/contact-syedsubhanali/book-now'}>
               <Button
                 className="relative h-10 sm:h-12 w-full text-black font-bold font-inter text-sm sm:text-lg rounded-lg overflow-hidden 
                   bg-gradient-to-r from-yellow-300 via-yellow-500 to-[#FEFE8B] 
@@ -91,7 +94,7 @@ export default function TicketSelector() {
                   transition-all duration-500 ease-in-out mb-2 sm:mb-4"
                 size="lg"
               >
-                <span className="relative z-10 text-[13px] sm:text-base md:text-lg">I AM STUCKED, SHOW ME YOUR DEMO</span>
+                <span className="relative z-10 text-sm sm:text-base md:text-lg">I'm Wasting Money, Show Me the Better Option</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
               </Button>
@@ -105,25 +108,25 @@ export default function TicketSelector() {
 
               {/* Price */}
               <div className="text-center mb-4 sm:mb-6">
-                <div className="text-4xl sm:text-5xl font-bold font-inter text-white mb-1 sm:mb-2 tracking-tighter">
-                  Starting from $99
+                <div className="text-3xl sm:text-4xl font-bold font-inter text-white mb-1 sm:mb-2 tracking-tighter">
+                  Starting from $497 / Month
                 </div>
-                <div className="text-lg sm:text-xl font-semibold text-amber-200">Integrity Tax Software</div>
+                <div className="text-lg sm:text-xl font-semibold text-amber-200">Syed’s A–Z Growth System</div>
               </div>
-              <div className="border mt-1.5 mb-2 border-[#672c0b]"></div>
+              <div className="border  mb-1.5 border-[#672c0b]"></div>
 
               {/* Features */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {vipFeatures.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-2 sm:gap-3">
-                    <Check className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 mt-1 flex-shrink-0" />
+                    <Check className="w-4 h-4 sm:w-5 sm:h-5 text-[#B8D4FF] mt-1 flex-shrink-0" />
                     <span className="text-sm sm:text-[17px] text-white">{feature.text}</span>
                   </div>
                 ))}
               </div>
 
               {/* Button */}
-              <Link href={'/booking'}>
+              <Link href={'https://calendly.com/contact-syedsubhanali/book-now'}>
               <Button
                 className="relative h-10 sm:h-12 w-full text-black font-bold font-inter text-sm sm:text-lg rounded-lg overflow-hidden 
                   bg-gradient-to-r from-yellow-300 via-yellow-500 to-[#FEFE8B] 
@@ -132,8 +135,8 @@ export default function TicketSelector() {
                   transition-all duration-500 ease-in-out mb-2 sm:mb-4"
                 size="lg"
               >
-<span className="relative font-inter font-bold z-10 text-[13px] sm:text-base md:text-lg text-center block px-2 sm:px-4 md:px-6 lg:px-8">
-  YES, I WANT INTEGRITY TAX SOFTWARE
+<span className="relative font-inter font-bold z-10 text-sm sm:text-base md:text-lg text-center block px-2 sm:px-4">
+  Yes, I Want the All-In-One Marketing System
 </span>                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
               </Button>

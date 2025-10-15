@@ -4,11 +4,10 @@ import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 
 const vipBonuses = [
-  { title: "BONUS 1: Free Website or Free Laptop (Your Choice)", desc: "Launch with either a professional done-for-you website to attract clients OR a brand-new laptop to run your tax business smoothly." },
-  { title: "BONUS 2: Branded Mobile App + Client Portal", desc: "Stand out from competitors with your own client-facing app and secure portal. Build trust instantly and let clients upload docs & track returns — all under your brand." },
-  { title: "BONUS 3: Mentorship & Training Program", desc: "Step-by-step onboarding + mentorship from experienced tax professionals. You’ll know exactly how to launch in 7 days, file returns, and scale without confusion." },
-  { title: "BONUS 4: Done-For-You Marketing Toolkit", desc: "Get our complete plug-and-play marketing kit: pre-made ads, social posts, scripts, and outreach templates — so you can start landing clients on day one." },
-  { title: "BONUS 5: 7-Day Money-Back Guarantee", desc: "Risk-free enrollment. If after 7 days you don’t feel it’s worth every penny, request a refund — no awkward questions, no hoops, just your money back." },
+  { title: "Bonus #1 — The Growth Engine Setup", desc: "Your entire Ad + funnel ecosystem built for you. We'll set up everything from Ad accounts to Landing pages, Automations and Tracking. You'll go from 'figuring it out' to a ready-to-run Client Acquisition system in days. Step 1: Plug in your offer or product. Step 2: Launch pre-tested Ad creatives that convert. Step 3: Watch qualified leads flow into your CRM. Step 4: Automate follow-ups and close more sales." },
+  { title: "Bonus #2 — Copy & Creative Vault", desc: "Access our private library of Ad copy, Content hooks, and proven creatives across multiple niches. It's like hiring a $15K/month creative team but you get it instantly. ✅ Plug-and-play templates ✅ Scroll-stopping Social Post Examples ✅ Sales-focused captions and CTAs ✅ Weekly creative refreshes based on top-performing campaigns" },
+  { title: "Bonus #3 — Performance Guarantee Policy", desc: "If you don't see traction within 30 days of going live, Our team will personally review your campaigns, offers, targeting and rebuild what's needed to make it work. No guesswork. No confusion. Just clarity and action." },
+
 ]
 
 export default function VIPSection() {
@@ -22,14 +21,14 @@ export default function VIPSection() {
   ]
 
   return (
-    <section className="relative bg-gradient-to-br from-[#064c42] via-[#0C7061] to-black text-white py-12 px-6 md:px-12 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#4169E1] via-[#6A98FF] to-black text-white py-12 px-6 md:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-oxanium font-bold text-center mb-6 bg-clip-text text-white">
-          Why You Should Upgrade to Tax Integrity Software
+          This isn't just another "Marketing Service." It's a Complete Growth System.
         </h2>
 
         <p className="text-center text-gray-200 max-w-2xl mx-auto mb-12">
-          5 Exclusive Bonuses When You Join Integrity Today
+          Aside from our full-service Ads & Social Media Program, you'll also get exclusive bonuses designed to launch and scale your business faster, with 90% of the heavy lifting done for you.
         </p>
 
         <div className="md:flex md:gap-12">
@@ -42,10 +41,10 @@ export default function VIPSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.2 }}
-                className="relative p-6 rounded-[1rem] bg-[#02342c] hover:bg-[#023028] shadow-xl border border-white/10 hover:scale-[1.03] transition-transform duration-500 cursor-pointer"
+                className="relative p-6 rounded-[1rem] bg-[#4169E1]/30 hover:bg-[#4169E1]/30 shadow-xl border border-white/10 hover:scale-[1.03] transition-transform duration-500 cursor-pointer"
               >
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#1FFACF]/20 rotate-45 rounded-lg pointer-events-none"></div>
-                <h3 className="text-xl md:text-2xl font-bold font-inter text-[#25DCBB] mb-2 z-10 relative">{bonus.title}</h3>
+                <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#6A98FF]/20 rotate-45 rounded-lg pointer-events-none"></div>
+                <h3 className="text-xl md:text-2xl font-bold font-inter text-[#1d408c] mb-2 z-10 relative">{bonus.title}</h3>
                 <p className="text-gray-200 text-sm md:text-base z-10 relative">{bonus.desc}</p>
               </motion.div>
             ))}
@@ -76,6 +75,25 @@ export default function VIPSection() {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-12">
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            Let's Build Your Growth System
+          </h3>
+          <p className="text-lg text-gray-300 mb-8">
+            → Get everything you need to attract clients, close sales, and scale without burnout.
+          </p>
+          <a href="https://calendly.com/contact-syedsubhanali/book-now">
+            <motion.button
+              className="bg-[#6A98FF] text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-[#5580e8] transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Book Your Free Strategy Call
+            </motion.button>
+          </a>
         </div>
       </div>
 
