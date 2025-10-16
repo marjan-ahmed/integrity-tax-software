@@ -36,7 +36,7 @@ export default function ClientTestimonialsGrid() {
   }
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#1c1d2f] overflow-hidden">
+    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#131320] overflow-hidden">
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-5"

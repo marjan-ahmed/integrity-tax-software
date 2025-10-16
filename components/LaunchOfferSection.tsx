@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function LaunchOfferSection() {
   return (
     <section
-      className="relative py-20 px-6 sm:px-12 md:px-16 text-white bg-[#1c1d2f]"
+      className="relative py-20 px-6 sm:px-12 md:px-16 text-white bg-[#131320]"
     >
       {/* Overlay for opacity effect */}
       <div className="absolute inset-0 bg-black/40"></div>
@@ -35,7 +35,7 @@ export default function LaunchOfferSection() {
 
         <Link href={'/booking'}>
         <motion.button
-          className="inline-flex font-inter items-center gap-3 bg-white text-[#1c1d2f] font-bold rounded-lg px-6 sm:px-8 py-4 sm:py-5 text-md sm:text-xl shadow-lg transition-all duration-300"
+          className="inline-flex font-inter items-center gap-3 bg-white text-[#131320] font-bold rounded-lg px-6 sm:px-8 py-4 sm:py-5 text-md sm:text-xl shadow-lg transition-all duration-300"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

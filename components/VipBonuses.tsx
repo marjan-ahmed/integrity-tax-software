@@ -21,7 +21,7 @@ export default function VIPSection() {
   ]
 
   return (
-    <section className="relative bg-[#1c1d2f] text-white py-12 px-6 md:px-12 overflow-hidden">
+    <section className="relative bg-[#131320] text-white py-12 px-6 md:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-oxanium font-bold text-center mb-6 bg-clip-text text-white">
           This isn't just another "Marketing Service." It's a Complete Growth System.

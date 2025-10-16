@@ -38,9 +38,9 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-[#1c1d2f] min-h-screen text-white">
+    <div className="bg-[#131320] min-h-screen text-white">
       {/* Top Marquee */}
-     <section className="relative h-screen flex items-center bg-[#1c1d2f] overflow-hidden">
+     <section className="relative h-screen flex items-center bg-[#131320] overflow-hidden">
   {/* Background Image */}
   <Image
     src="/images/hero-bg.png"
@@ -51,7 +51,7 @@ export default function Home() {
   />
 
   {/* Overlay (so text is readable but image still visible) */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-[#1c1d2f]/80"></div>
+  <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-[#131320]/80"></div>
 
   {/* Hero Content */}
   <motion.div
@@ -120,7 +120,7 @@ export default function Home() {
 
 {/* You Don't Need Section */}
 <motion.section
-  className="relative bg-[#1c1d2f] text-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+  className="relative bg-[#131320] text-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
   style={{
     backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)`,
     backgroundSize: "30px 30px",
@@ -131,7 +131,7 @@ export default function Home() {
   variants={staggerContainer}
 >
   {/* Dark overlay to ensure readability */}
-  <div className="absolute inset-0 bg-[#1c1d2f]/30"></div>
+  <div className="absolute inset-0 bg-[#131320]/30"></div>
   <div className="relative z-10 max-w-6xl mx-auto">
     <motion.div className="text-center mb-16" variants={fade}>
       <h2 className="font-oxanium text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">

@@ -32,7 +32,7 @@ export default function AfterWorkingWithUsSection() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-[#1c1d2f]">
+    <section className="py-16 px-4 sm:px-6 bg-[#131320]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -63,7 +63,7 @@ export default function AfterWorkingWithUsSection() {
               >
                 <div className="flex flex-col md:flex-row items-start gap-6">
                   <div className={`${step.color} p-4 rounded-lg flex-shrink-0`}>
-                    <Icon className="w-8 h-8 text-[#1c1d2f]" />
+                    <Icon className="w-8 h-8 text-[#131320]" />
                   </div>
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">

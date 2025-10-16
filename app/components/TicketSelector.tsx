@@ -30,14 +30,14 @@ export default function TicketSelector() {
 
   return (
     <div 
-      className="relative min-h-screen p-4 sm:p-6 md:p-8 lg:p-12 bg-[#1c1d2f] overflow-hidden"
+      className="relative min-h-screen p-4 sm:p-6 md:p-8 lg:p-12 bg-[#131320] overflow-hidden"
       style={{
         backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)`,
         backgroundSize: "30px 30px",
       }}
     >
       {/* Dark overlay to ensure readability */}
-      <div className="absolute inset-0 bg-[#1c1d2f]/90"></div>
+      <div className="absolute inset-0 bg-[#131320]/90"></div>
       
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -56,7 +56,7 @@ export default function TicketSelector() {
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 mb-8">
           {/* Free Ticket */}
           <SpotlightCard spotlightColor={`rgba(${255}, ${255}, ${255}, ${0.2})`}>
-            <div className="bg-[#000000] border border-gray-600/30 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
+            <div className="bg-[#131320] border border-gray-600/30 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
 
 
               {/* Price */}
@@ -104,16 +104,16 @@ export default function TicketSelector() {
 
           {/* VIP Ticket */}
           <SpotlightCard spotlightColor={`rgba(${255}, ${215}, ${0}, ${0.15})`}>
-            <div className="bg-[#1e649a] border border-[#1e6491] rounded-2xl p-6 sm:p-8 flex flex-col h-full">
+            <div className="bg-[#131320] border border-yellow-500/30 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
 
               {/* Price */}
               <div className="text-center mb-4 sm:mb-6">
                 <div className="text-3xl sm:text-4xl font-bold font-inter text-white mb-1 sm:mb-2 tracking-tighter">
                   Starting from $497 / Month
                 </div>
-                <div className="text-lg sm:text-xl font-semibold text-black">Syed's A–Z Growth System</div>
+                <div className="text-lg sm:text-xl font-semibold text-yellow-300">Syed's A–Z Growth System</div>
               </div>
-              <div className="border  mb-1.5 border-[#1e649a]"></div>
+              <div className="border  mb-1.5 border-yellow-500/30"></div>
 
               {/* Features */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">

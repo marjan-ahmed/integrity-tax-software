@@ -11,7 +11,7 @@ export default function HiddenSystemsSection() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-[#1c1d2f] text-white">
+    <section className="py-16 px-4 sm:px-6 bg-[#131320] text-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 

@@ -39,14 +39,14 @@ body {
 
 body {
   overflow-x: hidden;
-  background: #1c1d2f;
+  background: #131320;
 }
 
 
 @layer base {
   :root {
 
-    --background: 236 20% 15%;
+    --background: 240 17% 12%;
 
     --foreground: 0 0% 98%;
 
@@ -98,7 +98,7 @@ body {
   }
   .dark {
 
-    --background: 236 20% 15%;
+    --background: 240 17% 12%;
 
     --foreground: 0 0% 98%;
 
