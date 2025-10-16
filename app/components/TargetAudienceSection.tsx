@@ -38,7 +38,7 @@ export default function TargetAudienceSection() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-gray-50">
+    <section className="py-16 px-4 sm:px-6 bg-[#1c1d2f]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -87,20 +87,20 @@ export default function TargetAudienceSection() {
 
         {/* Guarantee Section */}
         <motion.div 
-          className="bg-gradient-to-r from-[#6A98FF] to-[#B8D4FF] rounded-2xl p-8 text-white text-center"
+          className="bg-gradient-to-r border-4 border-black from-[#FFF94C] via-[#FFF82E] to-[#FFF700] hover:brightness-110 rounded-2xl p-8 text-black text-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
             We'll 5x Your Marketing ROI or We Work With You Until You Do
           </h3>
-          <p className="text-lg mb-6 opacity-90">
+          <p className="text-sm sm:text-lg mb-6 opacity-90">
             If you don't see a 10x return on your marketing investment within 12 months,
             My team and I will continue working with you - optimizing your Ads, funnels, and Automations until you hit it, for up to 3 years.
           </p>
-          <p className="text-xl font-semibold">
+          <p className="text-lg sm:text-xl font-semibold">
             The risk? It's completely on us.
           </p>
         </motion.div>

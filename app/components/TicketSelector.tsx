@@ -30,14 +30,14 @@ export default function TicketSelector() {
 
   return (
     <div 
-      className="relative min-h-screen p-4 sm:p-6 md:p-8 lg:p-12 bg-gradient-to-br from-[#0f1419] to-[#14353f] overflow-hidden"
+      className="relative min-h-screen p-4 sm:p-6 md:p-8 lg:p-12 bg-[#1c1d2f] overflow-hidden"
       style={{
         backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)`,
         backgroundSize: "30px 30px",
       }}
     >
       {/* Dark overlay to ensure readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0f1419]/80 to-[#14353f]/80"></div>
+      <div className="absolute inset-0 bg-[#1c1d2f]/90"></div>
       
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -56,7 +56,7 @@ export default function TicketSelector() {
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 mb-8">
           {/* Free Ticket */}
           <SpotlightCard spotlightColor={`rgba(${255}, ${255}, ${255}, ${0.2})`}>
-            <div className="bg-gray-900 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
+            <div className="bg-[#000000] border border-gray-600/30 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
 
 
               {/* Price */}
@@ -73,7 +73,7 @@ export default function TicketSelector() {
                 {freeFeatures.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-2 sm:gap-3">
                     {feature.included ? (
-                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-[#6A98FF] mt-1 flex-shrink-0" />
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-white mt-1 flex-shrink-0" />
                     ) : (
                       <X className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 mt-1 flex-shrink-0" />
                     )}
@@ -94,7 +94,7 @@ export default function TicketSelector() {
                   transition-all duration-500 ease-in-out mb-2 sm:mb-4"
                 size="lg"
               >
-                <span className="relative z-10 text-sm sm:text-base md:text-lg">I'm Wasting Money, Show Me the Better Option</span>
+                <span className="relative z-10 text-xs sm:text-base md:text-lg">I'm Wasting Money, Show Me the Better Option</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
               </Button>
@@ -104,22 +104,22 @@ export default function TicketSelector() {
 
           {/* VIP Ticket */}
           <SpotlightCard spotlightColor={`rgba(${255}, ${215}, ${0}, ${0.15})`}>
-            <div className="bg-gradient-to-br from-amber-900 to-amber-800 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
+            <div className="bg-[#1e649a] border border-[#1e6491] rounded-2xl p-6 sm:p-8 flex flex-col h-full">
 
               {/* Price */}
               <div className="text-center mb-4 sm:mb-6">
                 <div className="text-3xl sm:text-4xl font-bold font-inter text-white mb-1 sm:mb-2 tracking-tighter">
                   Starting from $497 / Month
                 </div>
-                <div className="text-lg sm:text-xl font-semibold text-amber-200">Syed’s A–Z Growth System</div>
+                <div className="text-lg sm:text-xl font-semibold text-black">Syed's A–Z Growth System</div>
               </div>
-              <div className="border  mb-1.5 border-[#672c0b]"></div>
+              <div className="border  mb-1.5 border-[#1e649a]"></div>
 
               {/* Features */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                 {vipFeatures.map((feature, idx) => (
                   <div key={idx} className="flex items-start gap-2 sm:gap-3">
-                    <Check className="w-4 h-4 sm:w-5 sm:h-5 text-[#B8D4FF] mt-1 flex-shrink-0" />
+                    <Check className="w-4 h-4 sm:w-5 sm:h-5 text-white mt-1 flex-shrink-0" />
                     <span className="text-sm sm:text-[17px] text-white">{feature.text}</span>
                   </div>
                 ))}
@@ -135,7 +135,7 @@ export default function TicketSelector() {
                   transition-all duration-500 ease-in-out mb-2 sm:mb-4"
                 size="lg"
               >
-<span className="relative font-inter font-bold z-10 text-sm sm:text-base md:text-lg text-center block px-2 sm:px-4">
+<span className="relative font-inter font-bold z-10 text-xs sm:text-base md:text-lg text-center block px-2 sm:px-4">
   Yes, I Want the All-In-One Marketing System
 </span>                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent 
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>

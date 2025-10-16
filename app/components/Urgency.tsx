@@ -16,7 +16,7 @@ export default function UrgencySection() {
     >
       {/* Overlay for opacity + gradient */}
       {/* <div className="absolute inset-0 bg-red-700/60"></div> */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#06483e] via-[#0c7055] to-black opacity-90"></div>
+      <div className="absolute inset-0 bg-[#1c1d2f] opacity-95"></div>
 
       <div className="relative max-w-3xl mx-auto text-center">
         <motion.div
@@ -37,7 +37,7 @@ export default function UrgencySection() {
 
           <Link href={'/booking'}>
           <motion.button
-            className="inline-flex font-inter items-center gap-2 bg-[#B8D4FF] text-black font-semibold rounded-lg px-5 sm:px-6 py-3 sm:py-4 text-base sm:text-lg md:text-xl shadow-lg transition-all duration-300"
+            className="inline-flex font-inter items-center gap-2 bg-white text-[#1c1d2f] font-semibold rounded-lg px-5 sm:px-6 py-3 sm:py-4 text-base sm:text-lg md:text-xl shadow-lg transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

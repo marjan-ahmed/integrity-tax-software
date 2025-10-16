@@ -38,16 +38,17 @@ body {
 
 
 body {
-  overflow-x: hidden
+  overflow-x: hidden;
+  background: #1c1d2f;
 }
 
 
 @layer base {
   :root {
 
-    --background: 0 0% 100%;
+    --background: 236 20% 15%;
 
-    --foreground: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
 
     --card: 0 0% 100%;
 
@@ -97,7 +98,7 @@ body {
   }
   .dark {
 
-    --background: 0 0% 3.9%;
+    --background: 236 20% 15%;
 
     --foreground: 0 0% 98%;
 

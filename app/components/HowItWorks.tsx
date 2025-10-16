@@ -8,39 +8,39 @@ const steps = [
     title: "Audit",
     description: "Get a Clear Roadmap Before Spending a Dollar. We analyze your offer, audience, and current marketing setup. Identify gaps, missed opportunities, and high-ROI channels. Build a step-by-step game plan to get results fast.",
     icon: Search,
-    color: "bg-[#6A98FF]"
+    color: "bg-white"
   },
   {
     title: "Launch",
     description: "Turn Your Business Into a Conversion Machine. We craft scroll-stopping content and ad creatives. Writing all your copy hooks, headlines, and CTAs using proven frameworks. Launch and test campaigns across Facebook, Instagram, and Google.",
     icon: Zap,
-    color: "bg-[#6A98FF]"
+    color: "bg-white"
   },
   {
     title: "Optimize",
     description: "From Daily Ad Tweaks to Weekly Growth Reviews. We monitor your campaigns, analyze metrics, and optimize in real time. Eliminate wasted ad spend and scale what's working. Keep you updated with transparent dashboards and weekly reports.",
     icon: TrendingUp,
-    color: "bg-[#6A98FF]"
+    color: "bg-white"
   },
   {
     title: "Scale",
     description: "Turn Your Marketing Into a Self-Running System. Automate lead nurturing and follow-ups through CRM and email workflows. Build long-term retention through remarketing and consistent social content. Grow your brand month after month with a predictable, scalable system.",
     icon: Target,
-    color: "bg-[#6A98FF]"
+    color: "bg-white"
   },
 ];
 
 export default function HowItWorks() {
   return (
     <section 
-      className="relative py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-br from-[#0f1419] to-[#14353f] overflow-hidden"
+      className="relative py-16 px-4 md:px-8 lg:px-16 bg-[#1c1d2f] overflow-hidden"
       style={{
         backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)`,
         backgroundSize: "30px 30px",
       }}
     >
       {/* Dark overlay to ensure readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0f1419]/80 to-[#14353f]/80"></div>
+      <div className="absolute inset-0 bg-[#1c1d2f]/90"></div>
 
       <div className="relative z-10 max-w-5xl mx-auto text-center mb-12">
         <motion.h2
@@ -79,7 +79,7 @@ export default function HowItWorks() {
                 {/* Step number circle */}
                 <div
                   className={`flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center 
-                  ${step.color} text-white font-bold text-lg sm:text-xl z-10`}
+                  ${step.color} text-[#1c1d2f] font-bold text-lg sm:text-xl z-10`}
                 >
                   {idx + 1}
                 </div>
@@ -87,7 +87,7 @@ export default function HowItWorks() {
                 {/* Step card */}
                 <div className="bg-white/90 text-black shadow-lg rounded-2xl p-6 sm:p-8 mt-6 md:mt-0 md:w-3/4 mx-0 md:mx-6 backdrop-blur-sm">
                   <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6">
-                    <Icon className={`w-8 h-8 sm:w-10 sm:h-10 ${step.color} flex-shrink-0`} />
+                    <Icon className={`w-8 h-8 sm:w-10 sm:h-10 text-[#1c1d2f] flex-shrink-0`} />
                     <div className="text-center sm:text-left">
                       <h3 className="text-xl sm:text-2xl font-semibold mb-3">{step.title}</h3>
                       <p className="text-gray-700 text-base sm:text-lg leading-relaxed">{step.description}</p>

@@ -55,14 +55,14 @@ export default function FAQSection() {
 
   return (
     <div
-      className="relative py-12 px-4 sm:px-6 md:px-12 text-white bg-gradient-to-br from-[#0f1419] to-[#14353f] overflow-hidden"
+      className="relative py-12 px-4 sm:px-6 md:px-12 text-white bg-[#1c1d2f] overflow-hidden"
       style={{
         backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)`,
         backgroundSize: "30px 30px",
       }}
     >
       {/* Dark overlay to ensure readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0f1419]/80 to-[#14353f]/80"></div>
+      <div className="absolute inset-0 bg-[#1c1d2f]/90"></div>
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <motion.h2
@@ -84,7 +84,7 @@ export default function FAQSection() {
               className="border border-gray-600/30 rounded-2xl shadow-lg p-6 sm:p-8 text-left bg-white/10 backdrop-blur"
               style={{ perspective: 1000, transformStyle: 'preserve-3d'}}
             >
-              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-[#6A98FF]">{faqs[currentIndex].question}</h3>
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-white">{faqs[currentIndex].question}</h3>
               <p className="text-sm sm:text-base text-gray-300 whitespace-pre-line">{faqs[currentIndex].answer}</p>
             </motion.div>
           </AnimatePresence>
@@ -92,7 +92,7 @@ export default function FAQSection() {
           {/* Navigation Buttons */}
           <motion.button
             onClick={prevFAQ}
-            className="absolute top-1/2 -left-4 sm:-left-6 transform -translate-y-1/2 bg-[#6A98FF] text-white rounded-full p-2 sm:p-3 shadow-lg"
+            className="absolute top-1/2 -left-4 sm:-left-6 transform -translate-y-1/2 bg-white text-[#1c1d2f] rounded-full p-2 sm:p-3 shadow-lg"
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -100,7 +100,7 @@ export default function FAQSection() {
           </motion.button>
           <motion.button
             onClick={nextFAQ}
-            className="absolute top-1/2 -right-4 sm:-right-6 transform -translate-y-1/2 bg-[#6A98FF] text-white rounded-full p-2 sm:p-3 shadow-lg"
+            className="absolute top-1/2 -right-4 sm:-right-6 transform -translate-y-1/2 bg-white text-[#1c1d2f] rounded-full p-2 sm:p-3 shadow-lg"
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -114,7 +114,7 @@ export default function FAQSection() {
             <motion.span
               key={idx}
               className="w-3 h-3 rounded-full"
-              animate={{ scale: idx === currentIndex ? 1.3 : 1, backgroundColor: idx === currentIndex ? "#6A98FF" : "#D1D5DB" }}
+              animate={{ scale: idx === currentIndex ? 1.3 : 1, backgroundColor: idx === currentIndex ? "#ffffff" : "#9CA3AF" }}
               transition={{ duration: 0.3 }}
             ></motion.span>
           ))}

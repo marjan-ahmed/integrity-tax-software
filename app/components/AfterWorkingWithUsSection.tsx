@@ -10,19 +10,19 @@ export default function AfterWorkingWithUsSection() {
       title: "We Build Your Entire Marketing System",
       description: "Our team sets up everything from your Ad Accounts to your Landing Pages and automations. You'll have a full, ready-to-run system designed to generate leads and bookings on autopilot.",
       icon: Settings,
-      color: "bg-blue-500"
+      color: "bg-white"
     },
     {
       title: "We Turn Ads Into Actual Sales",
       description: "No more 'boosting posts' and hoping for results. We create, test, and optimize high-converting ad campaigns that bring real leads, real calls, and real revenue not just clicks.",
       icon: Target,
-      color: "bg-[#6A98FF]"
+      color: "bg-white"
     },
     {
       title: "You Focus on Growth, We Handle the Rest",
       description: "From creatives and copy to retargeting and reporting - We handle your marketing so you can focus on scaling your business. All you'll see are Sales, Booked calls and results that compound week after week.",
       icon: TrendingUp,
-      color: "bg-purple-500"
+      color: "bg-white"
     }
   ]
 
@@ -32,7 +32,7 @@ export default function AfterWorkingWithUsSection() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-white">
+    <section className="py-16 px-4 sm:px-6 bg-[#1c1d2f]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -42,7 +42,7 @@ export default function AfterWorkingWithUsSection() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-oxanium mb-4 text-gray-900">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-oxanium mb-4 text-white">
             This is what happens after you start working with us
           </h2>
         </motion.div>
@@ -54,7 +54,7 @@ export default function AfterWorkingWithUsSection() {
             return (
               <motion.div
                 key={idx}
-                className="bg-gray-50 rounded-xl p-6 md:p-8"
+                className="bg-white/10 backdrop-blur rounded-xl p-6 md:p-8"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -63,13 +63,13 @@ export default function AfterWorkingWithUsSection() {
               >
                 <div className="flex flex-col md:flex-row items-start gap-6">
                   <div className={`${step.color} p-4 rounded-lg flex-shrink-0`}>
-                    <Icon className="w-8 h-8 text-white" />
+                    <Icon className="w-8 h-8 text-[#1c1d2f]" />
                   </div>
                   <div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-900">
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">
                       {step.title}
                     </h3>
-                    <p className="text-gray-600 text-lg leading-relaxed">
+                    <p className="text-gray-300 text-sm sm:text-lg leading-relaxed">
                       {step.description}
                     </p>
                   </div>

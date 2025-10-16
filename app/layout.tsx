@@ -73,7 +73,7 @@ export default function RootLayout({
         </noscript>
 
         {/* Logo Section */}
-        <div className="py-2 border flex text-2xl font-bold border-[#14353f] flex-col bg-[#14353f] text-white justify-center items-center">
+        <div className="py-2 border-none flex text-xl  sm:text-2xl font-bold border-[#14353f] flex-col bg-black text-white justify-center items-center">
           <Link href={"/"}>
               SYED SUBHAN ALI
           </Link>

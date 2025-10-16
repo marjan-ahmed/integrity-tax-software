@@ -15,13 +15,13 @@ export default function VIPSection() {
   const [isZoomed, setIsZoomed] = useState<boolean>(false)
 
   const images = [
-    "/images/ceo.jpg",
-    "https://framerusercontent.com/images/N4mbQabDa2bRxVOJZ20NDfXVWaw.png?scale-down-to=1024",
-    "/images/web-dev.jpg",
+    "/images/bonus-1.webp",
+    "/images/bonus-2.webp",
+    "/images/bonus-3.webp",
   ]
 
   return (
-    <section className="relative bg-gradient-to-br from-[#4169E1] via-[#6A98FF] to-black text-white py-12 px-6 md:px-12 overflow-hidden">
+    <section className="relative bg-[#1c1d2f] text-white py-12 px-6 md:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-oxanium font-bold text-center mb-6 bg-clip-text text-white">
           This isn't just another "Marketing Service." It's a Complete Growth System.
@@ -41,10 +41,10 @@ export default function VIPSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.2 }}
-                className="relative p-6 rounded-[1rem] bg-[#4169E1]/30 hover:bg-[#4169E1]/30 shadow-xl border border-white/10 hover:scale-[1.03] transition-transform duration-500 cursor-pointer"
+                className="relative p-6 rounded-[1rem] bg-[#3A67BB]/30 hover:bg-[#4169E1]/30 shadow-xl border border-white/10 hover:scale-[1.03] transition-transform duration-500 cursor-pointer"
               >
                 <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#6A98FF]/20 rotate-45 rounded-lg pointer-events-none"></div>
-                <h3 className="text-xl md:text-2xl font-bold font-inter text-[#1d408c] mb-2 z-10 relative">{bonus.title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold  text-[#fbff00] mb-2 z-10 relative">{bonus.title}</h3>
                 <p className="text-gray-200 text-sm md:text-base z-10 relative">{bonus.desc}</p>
               </motion.div>
             ))}
@@ -87,7 +87,7 @@ export default function VIPSection() {
           </p>
           <a href="https://calendly.com/contact-syedsubhanali/book-now">
             <motion.button
-              className="bg-[#6A98FF] text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-[#5580e8] transition-colors"
+              className="font-semibold text-black px-8 py-4 rounded-lg text-lg bg-gradient-to-r from-[#FFF94C] via-[#FFF82E] to-[#FFF700] hover:brightness-110 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
