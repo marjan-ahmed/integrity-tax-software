@@ -166,15 +166,15 @@ export default function ClientTestimonialsGrid() {
           }
           
           .mobile-row-1 {
-            animation: scroll-left 20s linear infinite;
+            animation: scroll-left 23s linear infinite;
           }
           
           .mobile-row-2 {
-            animation: scroll-right 22s linear infinite;
+            animation: scroll-right 25s linear infinite;
           }
           
           .mobile-row-3 {
-            animation: scroll-left 24s linear infinite;
+            animation: scroll-left 27s linear infinite;
           }
           
           .mobile-row-1,

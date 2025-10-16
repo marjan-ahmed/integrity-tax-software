@@ -16,6 +16,7 @@ import TargetAudienceSection from "./components/TargetAudienceSection"
 import AfterWorkingWithUsSection from "./components/AfterWorkingWithUsSection"
 import HiddenSystemsSection from "./components/HiddenSystemsSection"
 import Link from "next/link"
+import ClientTestimonialsGrid from "./components/ClientTestimonialsGrid"
 
 export default function Home() {
   const shouldReduceMotion = useReducedMotion()
@@ -200,6 +201,7 @@ The Digital Product Formula gives complete beginners a clear path from first pro
         <TargetAudienceSection />
       </motion.section>
 
+    <ClientTestimonialsGrid />
 
       {/* Hidden Systems Section */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
