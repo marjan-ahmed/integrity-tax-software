@@ -100,7 +100,7 @@ export default function TicketSelector() {
               </Button>
               </Link>
             </div>
-          </SpotlightCard>
+           </SpotlightCard>
 
           {/* VIP Ticket */}
           <SpotlightCard spotlightColor={`rgba(${255}, ${215}, ${0}, ${0.15})`}>
