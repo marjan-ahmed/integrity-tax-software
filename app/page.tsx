@@ -100,8 +100,8 @@ export default function Home() {
       <video
         autoPlay
         loop
-        muted
         playsInline
+        controls
         className="w-full h-auto rounded-xl shadow-2xl brightness-110 border border-white/10"
       >
         <source src="/subhan-ads-demo-video.mp4" type="video/mp4" />

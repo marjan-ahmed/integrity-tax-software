@@ -4,51 +4,29 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 
 export default function ClientTestimonialsGrid() {
-  // Generate array of client images
   const clientImages = Array.from({ length: 15 }, (_, index) => ({
     id: index + 1,
     src: `/images/client-${index + 1}.avif`,
     alt: `Happy Client ${index + 1}`,
   }))
 
-  // Group images into 3 rows of 5 images each
-  const rows = []
-  for (let i = 0; i < clientImages.length; i += 5) {
-    rows.push(clientImages.slice(i, i + 5))
-  }
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
-  const rowVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  }
+  const row1 = clientImages.slice(0, 8)
+  const row2 = clientImages.slice(8, 15)
 
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#131320] overflow-hidden">
       {/* Background Pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-5"
         style={{
           backgroundImage: `radial-gradient(circle, rgba(0,0,0,0.1) 1px, transparent 1px)`,
           backgroundSize: "20px 20px",
         }}
       />
-      
-      <div className="relative z-10 max-w-6xl mx-auto">
+
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,9 +41,9 @@ export default function ClientTestimonialsGrid() {
           </p>
         </motion.div>
 
-        {/* Mobile Layout - Horizontal Scrolling Rows */}
+        {/* ✅ Mobile Layout (same as before) */}
         <div className="md:hidden space-y-4 overflow-hidden">
-          {rows.map((row, rowIndex) => (
+          {[row1.slice(0, 5), row2.slice(0, 5), clientImages.slice(0, 5)].map((row, rowIndex) => (
             <motion.div
               key={`mobile-row-${rowIndex}`}
               className="relative w-full overflow-hidden"
@@ -74,13 +52,11 @@ export default function ClientTestimonialsGrid() {
               viewport={{ once: true }}
               transition={{ delay: rowIndex * 0.2, duration: 0.6 }}
             >
-              <div className={`flex gap-4 mobile-scroll-row mobile-row-${rowIndex + 1} whitespace-nowrap`}>
-                {/* Triple the images for seamless infinite scrolling */}
+              <div
+                className={`flex gap-4 mobile-scroll-row mobile-row-${rowIndex + 1} whitespace-nowrap`}
+              >
                 {[...row, ...row, ...row].map((client, imageIndex) => (
-                  <div
-                    key={`mobile-${client.id}-${imageIndex}`}
-                    className="flex-shrink-0 inline-block"
-                  >
+                  <div key={`mobile-${client.id}-${imageIndex}`} className="flex-shrink-0 inline-block">
                     <div className="w-[120px] h-[150px] relative rounded-xl overflow-hidden shadow-lg bg-white p-1 hover:shadow-xl transition-shadow duration-300">
                       <Image
                         src={client.src}
@@ -97,98 +73,83 @@ export default function ClientTestimonialsGrid() {
           ))}
         </div>
 
-        {/* Desktop Layout - Static 3x5 Grid */}
-        <motion.div 
-          className="hidden md:block space-y-4"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {rows.map((row, rowIndex) => (
-            <motion.div
-              key={`desktop-row-${rowIndex}`}
-              className="flex justify-center gap-4"
-              variants={rowVariants}
-              transition={{ delay: rowIndex * 0.15 }}
-            >
-              {row.map((client) => (
-                <motion.div
-                  key={`desktop-${client.id}`}
-                  className="relative group cursor-pointer"
-                  whileHover={{ 
-                    scale: 1.05, 
-                    boxShadow: "0 20px 40px rgba(0,0,0,0.15)" 
-                  }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
-                >
-                  <div className="w-[223px] h-[266px] relative rounded-xl overflow-hidden shadow-xl bg-white p-2 hover:shadow-2xl transition-shadow duration-300">
-                    <Image
-                      src={client.src}
-                      alt={client.alt}
-                      fill
-                      className="object-cover rounded-xl"
-                      sizes="220px"
-                    />
-                    {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          ))}
-        </motion.div>
+        {/* ✅ Larger Devices - 2 Rows (animated) */}
+        <div className="hidden md:block space-y-10 overflow-hidden">
+          {/* Row 1 (8 testimonials) */}
+          <div className="flex gap-6 desktop-row-1 w-max">
+            {[...row1, ...row1].map((client, index) => (
+              <div
+                key={`desktop-1-${client.id}-${index}`}
+                className="w-[200px] h-[240px] relative rounded-xl overflow-hidden shadow-lg bg-white p-2 hover:scale-105 transition-transform duration-300"
+              >
+                <Image
+                  src={client.src}
+                  alt={client.alt}
+                  fill
+                  className="object-cover rounded-lg"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Row 2 (7 testimonials) */}
+          <div className="flex gap-6 desktop-row-2 w-max">
+            {[...row2, ...row2].map((client, index) => (
+              <div
+                key={`desktop-2-${client.id}-${index}`}
+                className="w-[200px] h-[240px] relative rounded-xl overflow-hidden shadow-lg bg-white p-2 hover:scale-105 transition-transform duration-300"
+              >
+                <Image
+                  src={client.src}
+                  alt={client.alt}
+                  fill
+                  className="object-cover rounded-lg"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
-      {/* CSS Animations for Mobile Horizontal Scrolling */}
+      {/* ✅ CSS Animations */}
       <style jsx>{`
+        /* Mobile animations */
         @media (max-width: 768px) {
           @keyframes scroll-left {
-            0% { 
-              transform: translateX(0%); 
-            }
-            100% { 
-              transform: translateX(-33.333%); 
-            }
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-33.333%); }
           }
-          
           @keyframes scroll-right {
-            0% { 
-              transform: translateX(-33.333%); 
-            }
-            100% { 
-              transform: translateX(0%); 
-            }
+            0% { transform: translateX(-33.333%); }
+            100% { transform: translateX(0%); }
           }
-          
           .mobile-scroll-row {
             width: max-content;
           }
-          
-          .mobile-row-1 {
-            animation: scroll-left 23s linear infinite;
+          .mobile-row-1 { animation: scroll-left 23s linear infinite; }
+          .mobile-row-2 { animation: scroll-right 25s linear infinite; }
+          .mobile-row-3 { animation: scroll-left 27s linear infinite; }
+        }
+
+        /* Desktop animations (2 rows) */
+        @media (min-width: 769px) {
+          @keyframes desktop-scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
           }
-          
-          .mobile-row-2 {
-            animation: scroll-right 25s linear infinite;
+          @keyframes desktop-scroll-right {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
           }
-          
-          .mobile-row-3 {
-            animation: scroll-left 27s linear infinite;
-          }
-          
-          .mobile-row-1,
-          .mobile-row-2,
-          .mobile-row-3 {
+
+          .desktop-row-1 {
+            animation: desktop-scroll-left 34s linear infinite;
             will-change: transform;
           }
-        }
-        
-        @media (min-width: 769px) {
-          .mobile-row-1,
-          .mobile-row-2,
-          .mobile-row-3 {
-            animation: none !important;
+
+          .desktop-row-2 {
+            animation: desktop-scroll-right 36s linear infinite;
+            will-change: transform;
           }
         }
       `}</style>

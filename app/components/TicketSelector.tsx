@@ -44,7 +44,7 @@ export default function TicketSelector() {
         {/* Header */}
         <div className="text-center mt-4 mb-16 px-4 sm:px-6 lg:px-0">
           <h1
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-8 font-oxanium leading-tight text-white"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-8 font-oxanium leading-tight text-white"
           >
             Tired of Agencies Overpromising and Underdelivering?
             <br className="hidden sm:block" />
@@ -104,7 +104,7 @@ export default function TicketSelector() {
 
           {/* VIP Ticket */}
           <SpotlightCard spotlightColor={`rgba(${255}, ${215}, ${0}, ${0.15})`}>
-            <div className="bg-[#131320] border border-yellow-500/30 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
+            <div className="bg-[#202013] border border-yellow-500/30 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
 
               {/* Price */}
               <div className="text-center mb-4 sm:mb-6">
@@ -113,7 +113,7 @@ export default function TicketSelector() {
                 </div>
                 <div className="text-lg sm:text-xl font-semibold text-yellow-300">Syed's A–Z Growth System</div>
               </div>
-              <div className="border  mb-1.5 border-yellow-500/30"></div>
+              <div className="border mb-1.5 border-yellow-500/30"></div>
 
               {/* Features */}
               <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
