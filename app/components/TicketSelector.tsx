@@ -96,7 +96,7 @@ export default function TicketSelector() {
                   translate-x-[-100%] hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
               </Button>
               </Link>
-            </div>
+          </div>
           </SpotlightCard>
 
           {/* VIP Ticket */}
