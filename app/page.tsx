@@ -73,7 +73,7 @@ export default function Home() {
           whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
           whileTap={{ scale: 0.97 }}
         >
-          Book Your Free Demo Today
+          Book Discovery Call
         </motion.button>
       </Link>
       <Link href={'https://api.taxnitro.com/widget/bookings/integrity10kdiscovery'}>
