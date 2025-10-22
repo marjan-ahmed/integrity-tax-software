@@ -32,9 +32,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Integrity Tax Software",
+  title: "Syed Subhan Ali",
   description:
-    "Keep 100% of your fees. Get everything you need to start or scale — plus a Free Website or Free Laptop bonus.",
+    "No theory, Real campaigns that focus on ROI",
 };
 
 export default function RootLayout({
@@ -73,7 +73,6 @@ export default function RootLayout({
         </noscript>
 
          <div className="relative flex text-xl sm:text-2xl font-bold justify-center items-center py-3 overflow-hidden border-none">
-          {/* Background image same as hero section */}
           <Image
             src="/images/hero-bg.png"
             alt="Header background"
@@ -82,15 +81,8 @@ export default function RootLayout({
             className="object-cover object-center brightness-110 contrast-110 opacity-90"
           />
 
-          {/* Gradient overlay with blur */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/63 to-[#080A12]/75 backdrop-blur-md"></div>
 
-          {/* ✅ Text — version 1 (white text) */}
-          {/* <Link href={"/"} className="relative z-10 text-white font-manrope tracking-wide">
-            SYED SUBHAN ALI
-          </Link> */}
-
-          {/* ✅ Text — version 2 (gradient text) */}
           <Link
             href={"/"}
             className="relative font-bold font-inter z-10 tracking-wide text-white"
