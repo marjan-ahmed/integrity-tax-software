@@ -33,13 +33,13 @@ export default function LaunchOfferSection() {
           Don’t get stuck paying more to platforms that take your profits. Get Integrity Tax Software’s all-in-one growth package starts from $199 and claim your free bonus today.
         </motion.p>
 
-        <Link href={'/booking'}>
+        <Link href={'https://api.taxnitro.com/widget/bookings/integrity10kdiscovery'}>
         <motion.button
           className="inline-flex font-inter items-center gap-3 bg-[#25DCBB] text-black font-bold rounded-lg px-6 sm:px-8 py-4 sm:py-5 text-md sm:text-xl shadow-lg transition-all duration-300"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Schedule My Free Demo Now
+          Schedule My Discovery Demo Now
           <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
         </motion.button>
         </Link>
