@@ -93,40 +93,42 @@ export default function Home() {
       </div>
 
       {/* ✅ Animated Counters */}
-      <motion.div
-        className="mt-10 flex flex-wrap justify-center lg:justify-start gap-8 sm:gap-12 text-[#fff600]"
-        variants={fade}
-      >
-        {/* Ad Spend Managed */}
-        <div className="flex flex-col items-center lg:items-start">
-          <span className="text-2xl sm:text-3xl font-extrabold font-manrope">
-            $<CountUp from={0} to={700} duration={0.5} className="inline" />k+
-          </span>
-          <span className="text-gray-200 text-xs sm:text-sm md:text-base mt-2 font-inter">
-            Ad Spend Managed
-          </span>
-        </div>
+      {/* ✅ Animated Counters */}
+<motion.div
+  className="mt-10 flex flex-nowrap justify-center lg:justify-start gap-4 sm:gap-8 text-[#fff600] overflow-x-auto no-scrollbar"
+  variants={fade}
+>
+  {/* Ad Spend Managed */}
+  <div className="flex flex-col items-center lg:items-start flex-shrink-0">
+    <span className="text-xl sm:text-2xl md:text-3xl font-extrabold font-manrope whitespace-nowrap">
+      $<CountUp from={0} to={700} duration={0.4} className="inline" />k+
+    </span>
+    <span className="text-gray-200 text-[10px] sm:text-xs md:text-sm mt-2 font-inter whitespace-nowrap">
+      Ad Spend Managed
+    </span>
+  </div>
 
-        {/* Revenue Generated */}
-        <div className="flex flex-col items-center lg:items-start">
-          <span className="text-2xl sm:text-3xl font-extrabold font-manrope">
-            $<CountUp from={0} to={2.3} duration={2.5} className="inline" />M+
-          </span>
-          <span className="text-gray-200 text-xs sm:text-sm md:text-base mt-2 font-inter">
-            Revenue Generated
-          </span>
-        </div>
+  {/* Revenue Generated */}
+  <div className="flex flex-col items-center lg:items-start flex-shrink-0">
+    <span className="text-xl sm:text-2xl md:text-3xl font-extrabold font-manrope whitespace-nowrap">
+      $<CountUp from={0} to={2.3} duration={2.5} className="inline" />M+
+    </span>
+    <span className="text-gray-200 text-[10px] sm:text-xs md:text-sm mt-2 font-inter whitespace-nowrap">
+      Revenue Generated
+    </span>
+  </div>
 
-        {/* Clients Worldwide */}
-        <div className="flex flex-col items-center lg:items-start">
-          <span className="text-2xl sm:text-3xl font-extrabold font-manrope">
-            <CountUp from={0} to={120} duration={1} className="inline" />+
-          </span>
-          <span className="text-gray-200 text-xs sm:text-sm md:text-base mt-2 font-inter">
-            Clients Worldwide
-          </span>
-        </div>
-      </motion.div>
+  {/* Clients Worldwide */}
+  <div className="flex flex-col items-center lg:items-start flex-shrink-0">
+    <span className="text-xl sm:text-2xl md:text-3xl font-extrabold font-manrope whitespace-nowrap">
+      <CountUp from={0} to={120} duration={1} className="inline" />+
+    </span>
+    <span className="text-gray-200 text-[10px] sm:text-xs md:text-sm mt-2 font-inter whitespace-nowrap">
+      Clients Worldwide
+    </span>
+  </div>
+</motion.div>
+
     </motion.div>
 
     {/* ✅ Desktop Video Section (Hidden on mobile) */}

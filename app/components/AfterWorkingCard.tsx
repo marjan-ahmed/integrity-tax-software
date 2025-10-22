@@ -26,10 +26,13 @@ export default function AfterWorkingCard({ image, title, description }: CardProp
           background: "linear-gradient(180deg, #151723 0%, #0A0C13 100%)",
           borderRadius: "20px",
         }}
-        className="w-[360px] border-2 border-[#1b1d2a] rounded-2xl shadow-lg overflow-hidden flex flex-col items-center text-center p-5"
+        className="w-[360px] sm:w-[360px] md:w-[360px] lg:w-[360px] 
+                   border-2 border-[#1b1d2a] rounded-2xl shadow-lg overflow-hidden 
+                   flex flex-col items-center text-center p-5
+                   max-[767px]:w-full max-[767px]:p-4 max-[767px]:mx-3"
       >
-        {/* ✅ Image Section (Bigger now, less padding look) */}
-        <div className="relative w-[330px] h-[210px] rounded-lg overflow-hidden mb-5">
+        {/* ✅ Image Section */}
+        <div className="relative w-[330px] h-[210px] rounded-lg overflow-hidden mb-5 max-[767px]:w-full max-[767px]:h-[180px]">
           <Image
             src={image}
             alt={title}
@@ -41,13 +44,16 @@ export default function AfterWorkingCard({ image, title, description }: CardProp
         </div>
 
         {/* ✅ Title (Gradient text) */}
-        <h2 className="text-[24px]  font-semibold mb-3 leading-7 bg-gradient-to-r from-[#5EB3F8] via-[#77C3FE] to-[#70C0FD] bg-clip-text text-transparent">
-  {title}
-</h2>
-
+        <h2 className="text-[24px] font-semibold mb-3 leading-7 
+                       bg-gradient-to-r from-[#5EB3F8] via-[#77C3FE] to-[#70C0FD] 
+                       bg-clip-text text-transparent 
+                       max-[767px]:text-[20px] max-[767px]:leading-6">
+          {title}
+        </h2>
 
         {/* ✅ Description */}
-        <p className="text-gray-300 text-[18px] leading-relaxed px-2">
+        <p className="text-gray-300 text-[18px] leading-relaxed px-2 
+                      max-[767px]:text-[15px] max-[767px]:leading-relaxed">
           {description}
         </p>
       </motion.div>
