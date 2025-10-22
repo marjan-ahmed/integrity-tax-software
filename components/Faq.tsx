@@ -55,18 +55,18 @@ export default function FAQSection() {
 
   return (
     <div
-      className="relative py-12 px-4 sm:px-6 md:px-12 text-white bg-[#131320] overflow-hidden"
+      className="relative py-12 px-4 sm:px-6 md:px-12 text-white bg-[#0E0E19] overflow-hidden"
       style={{
         backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)`,
         backgroundSize: "30px 30px",
       }}
     >
       {/* Dark overlay to ensure readability */}
-      <div className="absolute inset-0 bg-[#131320]/90"></div>
+      <div className="absolute inset-0 bg-[#0E0E19]/90"></div>
 
       <div className="relative z-10 max-w-3xl mx-auto text-center">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-12 font-oxanium text-white"
+          className="text-3xl md:text-4xl font-bold mb-12 font-manrope text-white"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0, transition: { duration: 0.8 } }}
         >
@@ -92,7 +92,7 @@ export default function FAQSection() {
           {/* Navigation Buttons */}
           <motion.button
             onClick={prevFAQ}
-            className="absolute top-1/2 -left-4 sm:-left-6 transform -translate-y-1/2 bg-white text-[#131320] rounded-full p-2 sm:p-3 shadow-lg"
+            className="absolute top-1/2 -left-4 sm:-left-6 transform -translate-y-1/2 bg-white text-[#0E0E19] rounded-full p-2 sm:p-3 shadow-lg"
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -100,7 +100,7 @@ export default function FAQSection() {
           </motion.button>
           <motion.button
             onClick={nextFAQ}
-            className="absolute top-1/2 -right-4 sm:-right-6 transform -translate-y-1/2 bg-white text-[#131320] rounded-full p-2 sm:p-3 shadow-lg"
+            className="absolute top-1/2 -right-4 sm:-right-6 transform -translate-y-1/2 bg-white text-[#0E0E19] rounded-full p-2 sm:p-3 shadow-lg"
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.95 }}
           >

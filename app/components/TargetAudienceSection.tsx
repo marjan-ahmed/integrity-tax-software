@@ -38,7 +38,7 @@ export default function TargetAudienceSection() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-[#131320]">
+    <section className="py-16 px-4 sm:px-6 bg-[#0E0E19]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -48,7 +48,7 @@ export default function TargetAudienceSection() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-oxanium mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-manrope mb-4">
             Who Is This For?
           </h2>
         </motion.div>

@@ -11,7 +11,7 @@ export default function HiddenSystemsSection() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-[#131320] text-white">
+    <section className="py-16 px-4 sm:px-6 bg-[#0E0E19] text-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -21,7 +21,7 @@ export default function HiddenSystemsSection() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-oxanium mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-manrope mb-6">
             Access to the Hidden Systems Behind High-Converting Ads
           </h2>
           <p className="text-xl text-gray-300 mb-8">

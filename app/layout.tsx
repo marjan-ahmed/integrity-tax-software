@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Inter, Oxanium } from "next/font/google";
+import { Inter, Manrope, Oxanium } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 
-const oxanium = Oxanium({
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-oxanium",
+  weight: ["800","200","300", "500","400", "600", "700"],
+  variable: "--font-manrope",
 });
 
 const inter = Inter({
@@ -61,7 +61,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${oxanium.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${manrope.variable} antialiased`}
       >
         <noscript>
           <img
@@ -73,7 +73,7 @@ export default function RootLayout({
         </noscript>
 
         {/* Logo Section */}
-        <div className="py-2 border-none flex text-xl  sm:text-2xl font-bold border-[#14353f] flex-col bg-black text-white justify-center items-center">
+        <div className="py-2 border-none flex text-xl  sm:text-2xl font-bold border-[#14353f] flex-col bg-[#090812] text-white justify-center items-center">
           <Link href={"/"}>
               SYED SUBHAN ALI
           </Link>

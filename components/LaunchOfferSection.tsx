@@ -7,14 +7,14 @@ import Link from "next/link";
 export default function LaunchOfferSection() {
   return (
     <section
-      className="relative py-20 px-6 sm:px-12 md:px-16 text-white bg-[#131320]"
+      className="relative py-20 px-6 sm:px-12 md:px-16 text-white bg-[#0E0E19]"
     >
       {/* Overlay for opacity effect */}
       <div className="absolute inset-0 bg-black/40"></div>
 
       <div className="relative max-w-4xl mx-auto text-center">
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-oxanium leading-snug"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-manrope leading-snug"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -35,7 +35,7 @@ export default function LaunchOfferSection() {
 
         <Link href={'/booking'}>
         <motion.button
-          className="inline-flex font-inter items-center gap-3 bg-white text-[#131320] font-bold rounded-lg px-6 sm:px-8 py-4 sm:py-5 text-md sm:text-xl shadow-lg transition-all duration-300"
+          className="inline-flex font-inter items-center gap-3 bg-white text-[#0E0E19] font-bold rounded-lg px-6 sm:px-8 py-4 sm:py-5 text-md sm:text-xl shadow-lg transition-all duration-300"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >

@@ -11,7 +11,7 @@ export default function AToZSystemSection() {
   }
 
   return (
-        <section className="py-16 px-4 sm:px-6 bg-[#131320]">
+        <section className="py-16 px-4 sm:px-6 bg-[#0E0E19]">
       <div className="max-w-7xl mx-auto space-y-20">
         {/* Header */}
         <motion.div
@@ -21,7 +21,7 @@ export default function AToZSystemSection() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-oxanium text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-manrope text-white">
             A to Z System For Sales, Leads and Booked Calls
           </h2>
           <p className="text-lg sm:text-xl text-gray-300">
@@ -77,7 +77,7 @@ export default function AToZSystemSection() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white font-oxanium">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white font-manrope">
             Your Win Could Be Next
           </h3>
           <p className="text-md sm:text-lg text-gray-300 max-w-3xl mx-auto">

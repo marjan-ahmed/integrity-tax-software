@@ -14,7 +14,7 @@ export default function ClientTestimonialsGrid() {
   const row2 = clientImages.slice(8, 15)
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#131320] overflow-hidden">
+    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#0E0E19] overflow-hidden">
       {/* Background Pattern */}
       <div
         className="absolute inset-0 opacity-5"
@@ -33,7 +33,7 @@ export default function ClientTestimonialsGrid() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-oxanium text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-manrope text-white mb-4">
             Our Happy Clients
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">

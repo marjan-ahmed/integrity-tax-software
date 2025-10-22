@@ -10,8 +10,9 @@ const config: Config = {
   theme: {
   	extend: {
 		 fontFamily: {
-        oxanium: ["var(--font-oxanium)", "sans-serif"], // ✅ Oxanium via CSS variable
+        manrope: ["var(--font-manrope)", "sans-serif"], // ✅ Oxanium via CSS variable
 		inter: ["var(--font-inter)", "sans-serif"],
+		sfns: ["sfns", 'sans-serif']
       },
   		colors: {
   			background: 'hsl(var(--background))',

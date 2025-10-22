@@ -21,9 +21,9 @@ export default function VIPSection() {
   ]
 
   return (
-    <section className="relative bg-[#131320] text-white py-12 px-6 md:px-12 overflow-hidden">
+    <section className="relative bg-[#0E0E19] text-white py-12 px-6 md:px-12 overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-oxanium font-bold text-center mb-6 bg-clip-text text-white">
+        <h2 className="text-4xl md:text-5xl font-manrope font-bold text-center mb-6 bg-clip-text text-white">
           This isn't just another "Marketing Service." It's a Complete Growth System.
         </h2>
 
@@ -44,7 +44,7 @@ export default function VIPSection() {
                 className="relative p-6 rounded-[1rem] bg-[#3A67BB]/30 hover:bg-[#4169E1]/30 shadow-xl border border-white/10 hover:scale-[1.03] transition-transform duration-500 cursor-pointer"
               >
                 <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#6A98FF]/20 rotate-45 rounded-lg pointer-events-none"></div>
-                <h3 className="text-xl md:text-2xl font-bold  text-[#fbff00] mb-2 z-10 relative">{bonus.title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold  text-[#fff600] mb-2 z-10 relative">{bonus.title}</h3>
                 <p className="text-gray-200 text-sm md:text-base z-10 relative">{bonus.desc}</p>
               </motion.div>
             ))}

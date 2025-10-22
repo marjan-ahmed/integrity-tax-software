@@ -32,7 +32,7 @@ export default function AfterWorkingWithUsSection() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-[#131320]">
+    <section className="py-16 px-4 sm:px-6 bg-[#0E0E19]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -42,7 +42,7 @@ export default function AfterWorkingWithUsSection() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-oxanium mb-4 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-manrope mb-4 text-white">
             This is what happens after you start working with us
           </h2>
         </motion.div>
@@ -63,7 +63,7 @@ export default function AfterWorkingWithUsSection() {
               >
                 <div className="flex flex-col md:flex-row items-start gap-6">
                   <div className={`${step.color} p-4 rounded-lg flex-shrink-0`}>
-                    <Icon className="w-8 h-8 text-[#131320]" />
+                    <Icon className="w-8 h-8 text-[#0E0E19]" />
                   </div>
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">
