@@ -31,10 +31,10 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-[#0E0E19] min-h-screen text-white">
+    <div className="bg-[#080A12] min-h-screen text-white">
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center bg-[#0E0E19] overflow-hidden">
+      <section className="relative h-screen flex items-center bg-[#080A12] overflow-hidden">
         {/* Background Image */}
         <Image
           src="/images/hero-bg.png"
@@ -45,7 +45,7 @@ export default function Home() {
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-[#0E0E19]/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-[#080A12]/80"></div>
 
         {/* Hero Content */}
         <motion.div

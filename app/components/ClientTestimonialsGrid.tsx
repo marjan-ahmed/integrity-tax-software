@@ -14,7 +14,7 @@ export default function ClientTestimonialsGrid() {
   const row2 = clientImages.slice(8, 15)
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#0E0E19] overflow-hidden">
+    <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#080A12] overflow-hidden">
       {/* Background Pattern */}
       <div
         className="absolute inset-0 opacity-5"

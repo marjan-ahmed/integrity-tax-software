@@ -30,14 +30,14 @@ export default function TicketSelector() {
 
   return (
     <div 
-      className="relative min-h-screen p-4 sm:p-6 md:p-8 lg:p-12 bg-[#0E0E19] overflow-hidden"
+      className="relative min-h-screen p-4 sm:p-6 md:p-8 lg:p-12 bg-[#080A12] overflow-hidden"
       style={{
         backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)`,
         backgroundSize: "30px 30px",
       }}
     >
       {/* Dark overlay to ensure readability */}
-      <div className="absolute inset-0 bg-[#0E0E19]/90"></div>
+      <div className="absolute inset-0 bg-[#080A12]/90"></div>
       
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -56,7 +56,7 @@ export default function TicketSelector() {
         <div className="grid gap-6 sm:gap-8 md:grid-cols-2 mb-8">
           {/* Free Ticket */}
           <SpotlightCard spotlightColor={`rgba(${255}, ${255}, ${255}, ${0.2})`}>
-            <div className="bg-[#0E0E19] border border-gray-600/30 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
+            <div className="bg-[#080A12] border border-gray-600/30 rounded-2xl p-6 sm:p-8 flex flex-col h-full">
 
 
               {/* Price */}

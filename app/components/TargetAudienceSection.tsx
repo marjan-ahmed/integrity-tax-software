@@ -38,7 +38,7 @@ export default function TargetAudienceSection() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-[#0E0E19]">
+    <section className="py-16 px-4 sm:px-6 bg-[#080A12]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -60,7 +60,7 @@ export default function TargetAudienceSection() {
             return (
               <motion.div
                 key={idx}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-[#102A56] border-2 border-[#1849A9] rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -72,10 +72,10 @@ export default function TargetAudienceSection() {
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-3 text-gray-900">
+                    <h3 className="text-xl  leading-7 bg-gradient-to-r from-[#5EB3F8] via-[#77C3FE] to-[#70C0FD] bg-clip-text text-transparent">
                       {audience.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-100 font-inter leading-relaxed">
                       {audience.description}
                     </p>
                   </div>
@@ -87,7 +87,7 @@ export default function TargetAudienceSection() {
 
         {/* Guarantee Section */}
         <motion.div 
-          className="bg-gradient-to-r border-4 border-black from-[#FFF94C] via-[#FFF82E] to-[#FFF700] hover:brightness-110 rounded-2xl p-8 text-black text-center"
+          className="bg-gradient-to-r border-4 border-black from-[#5EB3F8] via-[#77C3FE] to-[#70C0FD] rounded-2xl p-8 text-black text-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

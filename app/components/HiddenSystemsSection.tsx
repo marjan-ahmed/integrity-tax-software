@@ -11,7 +11,7 @@ export default function HiddenSystemsSection() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-[#0E0E19] text-white">
+    <section className="py-16 px-4 sm:px-6 bg-[#080A12] text-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -65,7 +65,7 @@ export default function HiddenSystemsSection() {
 
         {/* Trust System Section */}
         <motion.div 
-          className="bg-gradient-to-r from-[#FFF94C] via-[#FFF82E] to-[#FFF700] hover:brightness-110 text-black rounded-2xl p-8 text-center mb-8"
+          className="bg-gradient-to-r from-[#5EB3F8] via-[#77C3FE] to-[#70C0FD] text-black rounded-2xl p-8 text-center mb-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

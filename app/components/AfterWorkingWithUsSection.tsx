@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Settings, Target, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import AfterWorkingCard from "./AfterWorkingCard"
 
 export default function AfterWorkingWithUsSection() {
   const steps = [
@@ -32,7 +33,7 @@ export default function AfterWorkingWithUsSection() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-[#0E0E19]">
+    <section className="py-16 px-4 sm:px-6 bg-[#080A12]">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -49,7 +50,7 @@ export default function AfterWorkingWithUsSection() {
 
         {/* Steps */}
         <div className="space-y-8">
-          {steps.map((step, idx) => {
+          {/* {steps.map((step, idx) => {
             const Icon = step.icon
             return (
               <motion.div
@@ -63,7 +64,7 @@ export default function AfterWorkingWithUsSection() {
               >
                 <div className="flex flex-col md:flex-row items-start gap-6">
                   <div className={`${step.color} p-4 rounded-lg flex-shrink-0`}>
-                    <Icon className="w-8 h-8 text-[#0E0E19]" />
+                    <Icon className="w-8 h-8 text-[#080A12]" />
                   </div>
                   <div>
                     <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">
@@ -76,8 +77,27 @@ export default function AfterWorkingWithUsSection() {
                 </div>
               </motion.div>
             )
-          })}
-        </div>
+          })} */}
+          <div className="flex sm:flex-nowrap flex-wrap">
+          <AfterWorkingCard
+  image="/images/card1.png"
+  title="We Build Your Entire Marketing System"
+  description="Our team sets up everything from Ad Accounts to Landing Pages and automations, giving you a complete system designed to generate leads and bookings on autopilot."
+/>
+            <AfterWorkingCard 
+            image="/images/card2.png"
+            title="We Turn Ads Into Actual Sales"
+            description="No more 'boosting posts' and hoping for results. We create, test, and optimize high-converting ad campaigns that bring real leads, real calls, and real revenue not just clicks."
+            />
+
+            <AfterWorkingCard 
+            image="/images/card3.png"
+            title="We Turn Ads Into Actual Sales"
+            description="No more 'boosting posts' and hoping for results. We create, test, and optimize high-converting ad campaigns that bring real leads, real calls, and real revenue not just clicks."
+            />
+            </div>
+
+        </div> 
       </div>
     </section>
   )

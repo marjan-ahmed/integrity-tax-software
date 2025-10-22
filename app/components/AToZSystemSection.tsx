@@ -11,7 +11,7 @@ export default function AToZSystemSection() {
   }
 
   return (
-        <section className="py-16 px-4 sm:px-6 bg-[#0E0E19]">
+        <section className="py-16 px-4 sm:px-6 bg-[#080A12]">
       <div className="max-w-7xl mx-auto space-y-20">
         {/* Header */}
         <motion.div
