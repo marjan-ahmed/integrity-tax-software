@@ -72,10 +72,30 @@ export default function RootLayout({
           />
         </noscript>
 
-        {/* Logo Section */}
-        <div className="py-2 border-none flex text-xl  sm:text-2xl font-bold border-[#14353f] flex-col bg-[#090812] text-white justify-center items-center">
-          <Link href={"/"}>
-              SYED SUBHAN ALI
+         <div className="relative flex text-xl sm:text-2xl font-bold justify-center items-center py-3 overflow-hidden border-none">
+          {/* Background image same as hero section */}
+          <Image
+            src="/images/hero-bg.png"
+            alt="Header background"
+            fill
+            priority
+            className="object-cover object-center brightness-110 contrast-110 opacity-90"
+          />
+
+          {/* Gradient overlay with blur */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/63 to-[#080A12]/75 backdrop-blur-md"></div>
+
+          {/* ✅ Text — version 1 (white text) */}
+          {/* <Link href={"/"} className="relative z-10 text-white font-manrope tracking-wide">
+            SYED SUBHAN ALI
+          </Link> */}
+
+          {/* ✅ Text — version 2 (gradient text) */}
+          <Link
+            href={"/"}
+            className="relative font-bold font-inter z-10 tracking-wide text-white"
+          >
+            SYED SUBHAN ALI
           </Link>
         </div>
 
