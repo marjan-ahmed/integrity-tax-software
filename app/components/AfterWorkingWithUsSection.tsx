@@ -1,32 +1,9 @@
 'use client'
 
 import { motion } from "framer-motion"
-import { Settings, Target, TrendingUp } from "lucide-react"
-import Link from "next/link"
 import AfterWorkingCard from "./AfterWorkingCard"
 
 export default function AfterWorkingWithUsSection() {
-  const steps = [
-    {
-      title: "We Build Your Entire Marketing System",
-      description: "Our team sets up everything from your Ad Accounts to your Landing Pages and automations. You'll have a full, ready-to-run system designed to generate leads and bookings on autopilot.",
-      icon: Settings,
-      color: "bg-white"
-    },
-    {
-      title: "We Turn Ads Into Actual Sales",
-      description: "No more 'boosting posts' and hoping for results. We create, test, and optimize high-converting ad campaigns that bring real leads, real calls, and real revenue not just clicks.",
-      icon: Target,
-      color: "bg-white"
-    },
-    {
-      title: "You Focus on Growth, We Handle the Rest",
-      description: "From creatives and copy to retargeting and reporting - We handle your marketing so you can focus on scaling your business. All you'll see are Sales, Booked calls and results that compound week after week.",
-      icon: TrendingUp,
-      color: "bg-white"
-    }
-  ]
-
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
@@ -35,7 +12,7 @@ export default function AfterWorkingWithUsSection() {
   return (
     <section className="py-16 px-4 sm:px-6 bg-[#080A12]">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
+        {/* ✅ Header */}
         <motion.div 
           className="text-center mb-12"
           initial="hidden"
@@ -48,56 +25,32 @@ export default function AfterWorkingWithUsSection() {
           </h2>
         </motion.div>
 
-        {/* Steps */}
-        <div className="space-y-8">
-          {/* {steps.map((step, idx) => {
-            const Icon = step.icon
-            return (
-              <motion.div
-                key={idx}
-                className="bg-white/10 backdrop-blur rounded-xl p-6 md:p-8"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-                transition={{ delay: idx * 0.1 }}
-              >
-                <div className="flex flex-col md:flex-row items-start gap-6">
-                  <div className={`${step.color} p-4 rounded-lg flex-shrink-0`}>
-                    <Icon className="w-8 h-8 text-[#080A12]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-white">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm sm:text-lg leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            )
-          })} */}
-          <div className="flex sm:flex-nowrap flex-wrap">
+        {/* ✅ Cards Section */}
+        <div
+          className="
+            flex flex-col 
+            md:flex-row md:flex-nowrap 
+            justify-center items-center 
+          "
+        >
           <AfterWorkingCard
-  image="/images/card1.png"
-  title="We Build Your Entire Marketing System"
-  description="Our team sets up everything from Ad Accounts to Landing Pages and automations, giving you a complete system designed to generate leads and bookings on autopilot."
-/>
-            <AfterWorkingCard 
+            image="/images/card1.png"
+            title="We Build Your Entire Marketing System"
+            description="Our team sets up everything from Ad Accounts to Landing Pages and automations, giving you a complete system designed to generate leads and bookings on autopilot."
+          />
+
+          <AfterWorkingCard 
             image="/images/card2.png"
             title="We Turn Ads Into Actual Sales"
-            description="No more 'boosting posts' and hoping for results. We create, test, and optimize high-converting ad campaigns that bring real leads, real calls, and real revenue not just clicks."
-            />
+            description="No more 'boosting posts' and hoping for results. We create, test, and optimize high-converting ad campaigns that bring real leads, real calls, and real revenue — not just clicks."
+          />
 
-            <AfterWorkingCard 
+          <AfterWorkingCard 
             image="/images/card3.png"
-            title="We Turn Ads Into Actual Sales"
-            description="No more 'boosting posts' and hoping for results. We create, test, and optimize high-converting ad campaigns that bring real leads, real calls, and real revenue not just clicks."
-            />
-            </div>
-
-        </div> 
+            title="You Focus on Growth, We Handle the Rest"
+            description="From creatives and copy to retargeting and reporting — we handle your marketing so you can focus on scaling your business. All you'll see are sales, booked calls, and results that compound week after week."
+          />
+        </div>
       </div>
     </section>
   )
