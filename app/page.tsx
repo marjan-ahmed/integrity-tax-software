@@ -60,7 +60,7 @@ export default function Home() {
               Let My Growth Marketing System Build You A Successful Business Online
             </h1>
 
-            <p className="mt-3 font-inter text-sm sm:text-base lg:text-xl font-semibold text-yellow-300">
+            <p className="mt-3 font-inter text-sm sm:text-base lg:text-xl font-semibold text-[#fff600]">
               No theory, Real campaigns that focus on ROI
             </p>
 
