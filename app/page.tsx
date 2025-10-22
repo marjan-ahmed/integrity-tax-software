@@ -67,7 +67,7 @@ export default function Home() {
       <span className="font-bold">Free Laptop</span> bonus.
     </p>
     <div className="my-6 flex flex-col sm:flex-row gap-3">
-      <Link href={"/booking"} passHref>
+      <Link href={"https://api.taxnitro.com/widget/bookings/integrity10kdiscovery"} passHref>
         <motion.button
           className="py-3 px-4 font-inter bg-[#0C7061] text-white rounded-md w-full sm:w-auto"
           whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
@@ -76,7 +76,7 @@ export default function Home() {
           Book Discovery Call
         </motion.button>
       </Link>
-      <Link href={'https://api.taxnitro.com/widget/bookings/integrity10kdiscovery'}>
+      <Link href={'/booking'}>
         <motion.button
           className="py-3 px-4 font-inter bg-[#25dcbb] text-black rounded-md w-full sm:w-auto"
           whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
