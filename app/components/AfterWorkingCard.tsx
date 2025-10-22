@@ -9,7 +9,7 @@ interface CardProps {
   description: string
 }
 
-export default function DiscoveryCard({ image, title, description }: CardProps) {
+export default function AfterWorkingCard({ image, title, description }: CardProps) {
   const fadeIn = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
