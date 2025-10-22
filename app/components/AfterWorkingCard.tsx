@@ -16,47 +16,46 @@ export default function AfterWorkingCard({ image, title, description }: CardProp
   }
 
   return (
-    <section className="flex justify-center items-center bg-[#000814] py-10 px-4">
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-        style={{
-          background: "linear-gradient(180deg, #151723 0%, #0A0C13 100%)",
-          borderRadius: "20px",
-        }}
-        className="w-[360px] sm:w-[360px] md:w-[360px] lg:w-[360px] 
-                   border-2 border-[#1b1d2a] rounded-2xl shadow-lg overflow-hidden 
-                   flex flex-col items-center text-center p-5
-                   max-[767px]:w-full max-[767px]:p-4 max-[767px]:mx-3"
-      >
-        {/* ✅ Image Section */}
-        <div className="relative w-[330px] h-[210px] rounded-lg overflow-hidden mb-5 max-[767px]:w-full max-[767px]:h-[180px]">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 360px"
-            priority
-          />
-        </div>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeIn}
+      style={{
+        background: "linear-gradient(180deg, #151723 0%, #0A0C13 100%)",
+        borderRadius: "20px",
+      }}
+      className="
+        w-[360px] border-2 border-[#1b1d2a] rounded-2xl shadow-lg overflow-hidden 
+        flex flex-col items-center text-center p-5 mx-auto 
+        max-[767px]:w-full max-[767px]:p-4
+      "
+    >
+      {/* ✅ Image Section */}
+      <div className="relative w-[330px] h-[210px] rounded-lg overflow-hidden mb-5 max-[767px]:w-full max-[767px]:h-[180px]">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 360px"
+          priority
+        />
+      </div>
 
-        {/* ✅ Title (Gradient text) */}
-        <h2 className="text-[24px] font-semibold mb-3 leading-7 
-                       bg-gradient-to-r from-[#5EB3F8] via-[#77C3FE] to-[#70C0FD] 
-                       bg-clip-text text-transparent 
-                       max-[767px]:text-[20px] max-[767px]:leading-6">
-          {title}
-        </h2>
+      {/* ✅ Title (Gradient text) */}
+      <h2 className="text-[24px] font-semibold mb-3 leading-7 
+                     bg-gradient-to-r from-[#5EB3F8] via-[#77C3FE] to-[#70C0FD] 
+                     bg-clip-text text-transparent 
+                     max-[767px]:text-[20px] max-[767px]:leading-6">
+        {title}
+      </h2>
 
-        {/* ✅ Description */}
-        <p className="text-gray-300 text-[18px] leading-relaxed px-2 
-                      max-[767px]:text-[15px] max-[767px]:leading-relaxed">
-          {description}
-        </p>
-      </motion.div>
-    </section>
+      {/* ✅ Description */}
+      <p className="text-gray-300 text-[18px] leading-relaxed px-2 
+                    max-[767px]:text-[15px] max-[767px]:leading-relaxed">
+        {description}
+      </p>
+    </motion.div>
   )
 }

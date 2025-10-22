@@ -26,13 +26,7 @@ export default function AfterWorkingWithUsSection() {
         </motion.div>
 
         {/* ✅ Cards Section */}
-        <div
-          className="
-            flex flex-col 
-            md:flex-row md:flex-nowrap 
-            justify-center items-center 
-          "
-        >
+        <div className="flex flex-col md:flex-row md:flex-nowrap justify-center items-stretch ">
           <AfterWorkingCard
             image="/images/card1.png"
             title="We Build Your Entire Marketing System"
