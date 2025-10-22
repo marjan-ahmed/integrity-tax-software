@@ -64,10 +64,6 @@ export default function Home() {
               No theory, Real campaigns that focus on ROI
             </p>
 
-            <p className="mt-4 font-inter text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
-              I'll show you the exact system I use to generate qualified leads for
-              Service-based Businesses, SaaS Founders, and Restaurant Owners!
-            </p>
 
             {/* CTA Button */}
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">

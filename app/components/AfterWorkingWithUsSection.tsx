@@ -42,7 +42,7 @@ export default function AfterWorkingWithUsSection() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-manrope mb-4 text-white">
+          <h2 className="text-3xl sm:text-4xl font-bold font-manrope mb-4 text-white">
             This is what happens after you start working with us
           </h2>
         </motion.div>
