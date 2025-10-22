@@ -76,15 +76,6 @@ export default function Home() {
           Book Discovery Call
         </motion.button>
       </Link>
-      <Link href={'/booking'}>
-        <motion.button
-          className="py-3 px-4 font-inter bg-[#25dcbb] text-black rounded-md w-full sm:w-auto"
-          whileHover={typeof window !== "undefined" && window.innerWidth > 768 ? { scale: 1.03 } : {}}
-          whileTap={{ scale: 0.97 }}
-        >
-          Get Instant Access To Free Toolkit
-        </motion.button>
-      </Link>
     </div>
   </motion.div>
 
