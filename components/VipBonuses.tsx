@@ -4,11 +4,30 @@ import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 
 const vipBonuses = [
-  { title: "Bonus #1 — The Growth Engine Setup", desc: "Your entire Ad + funnel ecosystem built for you. We'll set up everything from Ad accounts to Landing pages, Automations and Tracking. You'll go from 'figuring it out' to a ready-to-run Client Acquisition system in days. Step 1: Plug in your offer or product. Step 2: Launch pre-tested Ad creatives that convert. Step 3: Watch qualified leads flow into your CRM. Step 4: Automate follow-ups and close more sales." },
-  { title: "Bonus #2 — Copy & Creative Vault", desc: "Access our private library of Ad copy, Content hooks, and proven creatives across multiple niches. It's like hiring a $15K/month creative team but you get it instantly. ✅ Plug-and-play templates ✅ Scroll-stopping Social Post Examples ✅ Sales-focused captions and CTAs ✅ Weekly creative refreshes based on top-performing campaigns" },
-  { title: "Bonus #3 — Performance Guarantee Policy", desc: "If you don't see traction within 30 days of going live, Our team will personally review your campaigns, offers, targeting and rebuild what's needed to make it work. No guesswork. No confusion. Just clarity and action." },
+  { 
+    title: "Bonus #1 — The Growth Engine Setup", 
+    desc: `Get your entire Ad and Funnel System built for you from Ad Accounts to Landing Pages, Automations and Tracking.
 
-]
+No guesswork, No “figuring it out.”
+
+We’ll plug your Offer into a Proven Client Acquisition System built to bring in results fast.`
+  },
+  { 
+    title: "Bonus #2 — Copy & Creative Vault", 
+    desc: `Access our Private Library of High Performing Ad Copy, Content Hooks, and Creatives across multiple niches.
+
+It’s like unlocking a $10K/month creative team instantly.`
+  },
+  { 
+    title: "Bonus #3 — Performance Guarantee Policy", 
+    desc: `If you don’t see traction within 30 days of going live, we’ll personally step in to optimize your campaigns, offers, and targeting until it clicks.
+
+No guesswork. No confusion.
+
+Just Clarity, Action and Results.`
+  }
+];
+
 
 export default function VIPSection() {
   const [currentImage, setCurrentImage] = useState<number>(0)
