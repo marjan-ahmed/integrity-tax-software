@@ -32,7 +32,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Syed Subhan Ali",
+  title: "Subhan Ads",
   description:
     "No theory, Real campaigns that focus on ROI",
 };
