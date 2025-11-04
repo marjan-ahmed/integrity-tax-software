@@ -1,17 +1,18 @@
 'use client'
 
 import Image from "next/image"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react"
+import { X } from "lucide-react"
 
 export default function ClientTestimonialsGrid() {
-  const clientImages = Array.from({ length: 15 }, (_, index) => ({
+  const [selectedImage, setSelectedImage] = useState<number | null>(null)
+  
+  const clientImages = Array.from({ length: 11 }, (_, index) => ({
     id: index + 1,
-    src: `/images/client-${index + 1}.avif`,
+    src: `/images/${index + 1}.png`,
     alt: `Happy Client ${index + 1}`,
   }))
-
-  const row1 = clientImages.slice(0, 8)
-  const row2 = clientImages.slice(8, 15)
 
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#080A12] overflow-hidden">
@@ -41,116 +42,172 @@ export default function ClientTestimonialsGrid() {
           </p>
         </motion.div>
 
-        {/* ✅ Mobile Layout (same as before) */}
-        <div className="md:hidden space-y-4 overflow-hidden">
-          {[row1.slice(0, 5), row2.slice(0, 5), clientImages.slice(0, 5)].map((row, rowIndex) => (
+        {/* Mobile Layout - Animated scrolling: 5 in first row, 6 in second row */}
+        <div className="md:hidden space-y-3 overflow-hidden">
+          {/* First row - 5 images with animation */}
+          <motion.div
+            className="relative w-full overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="flex gap-3 mobile-scroll-row-1 whitespace-nowrap">
+              {[...clientImages.slice(0, 5), ...clientImages.slice(0, 5), ...clientImages.slice(0, 5)].map((client, imageIndex) => (
+                <div 
+                  key={`mobile-row1-${client.id}-${imageIndex}`} 
+                  className="flex-shrink-0 inline-block cursor-pointer"
+                  onClick={() => setSelectedImage(client.id)}
+                >
+                  <div className="w-[120px] h-[140px] relative rounded-xl overflow-hidden shadow-lg bg-white p-1 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <Image
+                      src={client.src}
+                      alt={client.alt}
+                      fill
+                      className="object-cover rounded-lg"
+                      sizes="120px"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Second row - 6 images with animation (reverse direction) */}
+          <motion.div
+            className="relative w-full overflow-hidden"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className="flex gap-3 mobile-scroll-row-2 whitespace-nowrap">
+              {[...clientImages.slice(5, 11), ...clientImages.slice(5, 11), ...clientImages.slice(5, 11)].map((client, imageIndex) => (
+                <div 
+                  key={`mobile-row2-${client.id}-${imageIndex}`} 
+                  className="flex-shrink-0 inline-block cursor-pointer"
+                  onClick={() => setSelectedImage(client.id)}
+                >
+                  <div className="w-[120px] h-[140px] relative rounded-xl overflow-hidden shadow-lg bg-white p-1 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                    <Image
+                      src={client.src}
+                      alt={client.alt}
+                      fill
+                      className="object-cover rounded-lg"
+                      sizes="120px"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Desktop Layout - Static grid (5 per row on large, 2 rows on medium) */}
+        <motion.div 
+          className="hidden md:grid md:grid-cols-3 justify-center lg:grid-cols-5 gap-3 lg:gap-4 justify-items-center max-w-6xl mx-auto"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          {clientImages.map((client, index) => (
             <motion.div
-              key={`mobile-row-${rowIndex}`}
-              className="relative w-full overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
+              key={`desktop-${client.id}`}
+              className={`w-[220px] h-[260px] relative rounded-xl overflow-hidden shadow-lg bg-white p-2 hover:scale-105 transition-transform duration-300 cursor-pointer ${
+                index === 10 ? 'lg:col-start-3' : ''
+              }`}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: rowIndex * 0.2, duration: 0.6 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+              onClick={() => setSelectedImage(client.id)}
             >
-              <div
-                className={`flex gap-4 mobile-scroll-row mobile-row-${rowIndex + 1} whitespace-nowrap`}
-              >
-                {[...row, ...row, ...row].map((client, imageIndex) => (
-                  <div key={`mobile-${client.id}-${imageIndex}`} className="flex-shrink-0 inline-block">
-                    <div className="w-[120px] h-[150px] relative rounded-xl overflow-hidden shadow-lg bg-white p-1 hover:shadow-xl transition-shadow duration-300">
-                      <Image
-                        src={client.src}
-                        alt={client.alt}
-                        fill
-                        className="object-cover rounded-lg"
-                        sizes="120px"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <Image
+                src={client.src}
+                alt={client.alt}
+                fill
+                className="object-cover rounded-lg"
+                sizes="220px"
+              />
             </motion.div>
           ))}
-        </div>
-
-        {/* ✅ Larger Devices - 2 Rows (animated) */}
-        <div className="hidden md:block space-y-10 overflow-hidden">
-          {/* Row 1 (8 testimonials) */}
-          <div className="flex gap-6 desktop-row-1 w-max">
-            {[...row1, ...row1].map((client, index) => (
-              <div
-                key={`desktop-1-${client.id}-${index}`}
-                className="w-[200px] h-[240px] relative rounded-xl overflow-hidden shadow-lg bg-white p-2 hover:scale-105 transition-transform duration-300"
-              >
-                <Image
-                  src={client.src}
-                  alt={client.alt}
-                  fill
-                  className="object-cover rounded-lg"
-                />
-              </div>
-            ))}
-          </div>
-
-          {/* Row 2 (7 testimonials) */}
-          <div className="flex gap-6 desktop-row-2 w-max">
-            {[...row2, ...row2].map((client, index) => (
-              <div
-                key={`desktop-2-${client.id}-${index}`}
-                className="w-[200px] h-[240px] relative rounded-xl overflow-hidden shadow-lg bg-white p-2 hover:scale-105 transition-transform duration-300"
-              >
-                <Image
-                  src={client.src}
-                  alt={client.alt}
-                  fill
-                  className="object-cover rounded-lg"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        </motion.div>
       </div>
 
-      {/* ✅ CSS Animations */}
+      {/* Zoom Popup Modal */}
+      <AnimatePresence>
+        {selectedImage !== null && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              className="relative max-w-4xl w-full h-auto"
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ type: "spring", duration: 0.5 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close button */}
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
+                aria-label="Close"
+              >
+                <X size={32} />
+              </button>
+              
+              {/* Zoomed Image */}
+              <div className="relative w-full h-[70vh] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src={`/images/${selectedImage}.png`}
+                  alt={`Happy Client ${selectedImage}`}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 1024px) 90vw, 1024px"
+                  priority
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* CSS Animations - Mobile only */}
       <style jsx>{`
-        /* Mobile animations */
+        /* Mobile animations only */
         @media (max-width: 768px) {
           @keyframes scroll-left {
             0% { transform: translateX(0%); }
             100% { transform: translateX(-33.333%); }
           }
+          
           @keyframes scroll-right {
             0% { transform: translateX(-33.333%); }
             100% { transform: translateX(0%); }
           }
-          .mobile-scroll-row {
+          
+          .mobile-scroll-row-1 {
             width: max-content;
+            animation: scroll-left 25s linear infinite;
+            will-change: transform;
           }
-          .mobile-row-1 { animation: scroll-left 23s linear infinite; }
-          .mobile-row-2 { animation: scroll-right 25s linear infinite; }
-          .mobile-row-3 { animation: scroll-left 27s linear infinite; }
+          
+          .mobile-scroll-row-2 {
+            width: max-content;
+            animation: scroll-right 30s linear infinite;
+            will-change: transform;
+          }
         }
 
-        /* Desktop animations (2 rows) */
-        @media (min-width: 769px) {
-          @keyframes desktop-scroll-left {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          @keyframes desktop-scroll-right {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); }
-          }
-
-          .desktop-row-1 {
-            animation: desktop-scroll-left 34s linear infinite;
-            will-change: transform;
-          }
-
-          .desktop-row-2 {
-            animation: desktop-scroll-right 36s linear infinite;
-            will-change: transform;
-          }
+        /* Prevent body scroll when modal is open */
+        body:has(.fixed.z-50) {
+          overflow: hidden;
         }
       `}</style>
     </section>
