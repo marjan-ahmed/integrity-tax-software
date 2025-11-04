@@ -34,9 +34,9 @@ export default function VIPSection() {
   const [isZoomed, setIsZoomed] = useState<boolean>(false)
 
   const images = [
-    "/images/bonus-1.webp",
-    "/images/bonus-2.webp",
-    "/images/bonus-3.webp",
+    "/images/WhatsApp Image 2025-10-31 at 02.50.32_ad89f1ed.jpg",
+    "/images/Design 2.jpg",
+    "/images/Design 3.jpg",
   ]
 
   return (
